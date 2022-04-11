@@ -1,0 +1,34 @@
+{
+  "rolex": [
+    {
+      "image1": "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m226658-0001.png?impolicy=v6-upright&imwidth=420",
+      "model": "YACHT-MASTER 43",
+      "charac": "Oyster, 42 мм, желтое золото",
+      "titles": "ЧАСЫ OYSTER PERPETUAL YACHT-MASTER 42, 18‑КАРАТНОЕ ЖЕЛТОЕ ЗОЛОТО; ЦИФЕРБЛАТ: ЧЕРНЫЙ; БРАСЛЕТ: OYSTERFLEX.",
+      "desc": "Безель этой модели — вращающийся в двух направлениях безель, 60‑минутная градуированная шкала, черный матовый керамический диск Cerachrom, полированные цифры и деления. Он идеально сочетается с циферблатом. Прочность и водонепроницаемость этой модели делают ее идеальными часами для водных видов спорта и особенно для парусного спорта.",
+      "image2": "https://content.rolex.com/dam/2022/harmonised/bezel-with-colored-shadow/52372.png?impolicy=v6-main-feature&sc1=0.56&c1x=750&c1y=750&ho1=-3&vo1=-8&imwidth=1920",
+      "type": "yacht",
+      "id": 1
+    },
+    {
+      "image1": "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m126233-0039.png?impolicy=v6-upright&imwidth=420",
+      "model": "DATEJUST 36",
+      "charac": "Oyster, 36 мм, сталь Oystersteel и желтое золото",
+      "titles": "ЧАСЫ OYSTER PERPETUAL DATEJUST 36, СТАЛЬ OYSTERSTEEL И ЖЕЛТОЕ ЗОЛОТО; ЦИФЕРБЛАТ: ЗОЛОТИСТОГО ЦВЕТА, РЕЗНОЙ ДЕКОР; БРАСЛЕТ: JUBILEE.",
+      "desc": " Игра света на дужках и боковых сторонах корпусного кольца подчеркивает изящную форму корпуса Oyster диаметром 36 мм. Безель: рифленый. Часы Datejust пронесли сквозь время незыблемые эстетические принципы, обеспечившие им признание и узнаваемость, особенно в классических моделях.",
+      "image2": "https://content.rolex.com/dam/2022/harmonised/dial-raw-with-colored-shadow/52495_g_36.png?impolicy=v6-main-feature&sc1=0.73&c1x=750&c1y=750&ho1=-4&vo1=-9&imwidth=1920",
+      "type": "datejust",
+      "id": 2
+    },
+    {
+      "image1": "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m326238-0009.png?impolicy=v6-upright&imwidth=420",
+      "model": "SKY-DWELLER",
+      "charac": "Oyster, 42 мм, желтое золото",
+      "titles": "ЧАСЫ OYSTER PERPETUAL SKY‑DWELLER, 18‑КАРАТНОЕ ЖЕЛТОЕ ЗОЛОТО; ЦИФЕРБЛАТ: ОСЛЕПИТЕЛЬНО ЧЕРНЫЙ; БРАСЛЕТ: OYSTERFLEX.",
+      "desc": "Эта выразительная модель характеризуются индикацией второго часового пояса на смещенном от центра циферблата диске. Инновационная система настроек функций этих часов с помощью вращающегося безеля Ring Command уникальна для Rolex. ",
+      "image2": "https://content.rolex.com/dam/2022/harmonised/dial-raw-with-colored-shadow/51144_y_42.png?impolicy=v6-main-feature&sc1=0.7&c1x=750&c1y=750&ho1=-4&vo1=-15&imwidth=1920",
+      "type": "skydweller",
+      "id": 4
+    }
+  ]
+}

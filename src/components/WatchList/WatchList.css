@@ -1,0 +1,17 @@
+.watch-list {
+  display: flex;
+  justify-content: space-around;
+}
+.watch-card {
+  width: 300px;
+  display: inline-block;
+  overflow: hidden;
+}
+.watch-img {
+  transition: 1s;
+  display: block;
+  height: 300px;
+}
+.watch-img:hover {
+  transform: scale(1.1);
+}

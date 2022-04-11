@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.yachtMaster {
+  background-color: rgb(212, 209, 209);
+  margin: 0;
+  padding: 0;
+  height: 50vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
-
-.App-link {
-  color: #61dafb;
+.card-div {
+  text-align: center;
+  width: 350px;
+  height: 410px;
+  margin: 50px 10px 20px;
+  background-color: white;
+  display: inline-block;
+  overflow: hidden;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-div-img {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  transition: 1s;
+  display: block;
+}
+.card-div-img:hover {
+  transform: scale(1.1);
+}
+.example {
+  margin: 20px 0;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
 }
