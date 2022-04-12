@@ -1,6 +1,7 @@
 .watch-list {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .watch-card {
   width: 300px;

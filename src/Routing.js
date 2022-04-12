@@ -7,6 +7,7 @@ import EditedWatch from "./components/EditedWatch/EditedWatch";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import SkyDweller from "./components/SkyDweller/SkyDweller";
+import Watches from "./components/Watches/Watches";
 import YachtMaster from "./components/YactMaster/YachtMaster";
 
 const Routing = () => {
@@ -20,6 +21,7 @@ const Routing = () => {
         <Route path="/airking" element={<AirKing />} />
         <Route path="/datejust" element={<DateJust />} />
         <Route path="/edit/:id" element={<EditedWatch />} />
+        <Route path="/watches" element={<Watches />} />
       </Routes>
       <Footer />
     </BrowserRouter>
