@@ -31,7 +31,7 @@ const RolexContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   async function getWatch() {
-    let res = await axios(ROLEX_API);
+    let res = await axios(ROLEX_API + window.location.search);
     dispatch({
       type: GET_WATCH,
       payload: res,

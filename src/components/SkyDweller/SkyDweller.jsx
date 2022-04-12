@@ -4,11 +4,21 @@ import { rolexContext } from "../../context/rolexContext";
 import CardList from "../CardList/CardList";
 
 const SkyDweller = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const { rolex, getWatch } = useContext(rolexContext);
   useEffect(() => {
     getWatch();
   }, []);
-;
+  useEffect(() => {
+    setSearchParams({
+      type: "skydweller",
+    });
+  }, []);
+
+  useEffect(() => {
+    getWatch();
+  }, [searchParams]);
   return (
     <div className="yachtMaster">
       {rolex.map((item) => (

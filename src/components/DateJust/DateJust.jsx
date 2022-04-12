@@ -8,9 +8,18 @@ const DateJust = () => {
   useEffect(() => {
     getWatch();
   }, []);
-//   const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  
+  useEffect(() => {
+    setSearchParams({
+      type: "datejust",
+    });
+  }, []);
+
+  useEffect(() => {
+    getWatch();
+  }, [searchParams]);
+
   return (
     <div className="yachtMaster">
       {rolex.map((item) => (
