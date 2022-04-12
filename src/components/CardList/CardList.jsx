@@ -1,37 +1,13 @@
 import React, { useContext, useEffect } from "react";
-import { HeartOutlined } from "@ant-design/icons";
 import { Button } from "antd";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { rolexContext } from "../../context/rolexContext";
 
 const CardList = ({ item }) => {
-  const [searchParams, setSearchParams] = useSearchParams();
   const { handleWatchDelete } = useContext(rolexContext);
-  useEffect(() => {
-    setSearchParams({
-      type: "skydweller",
-    });
-  }, []);
 
-  //   useEffect(() => {
-  //     setSearchParams({
-  //       type: "yacht",
-  //     });
-  //   }, []);
-
-  //   useEffect(() => {
-  //     setSearchParams({
-  //       type: "datejust",
-  //     });
-  //   }, []);
-
-  //   useEffect(() => {
-  //     setSearchParams({
-  //       type: "airking",
-  //     });
-  //   }, []);
   return (
-    <div>
+    <div className="cardest">
       <div className="card-div">
         <img className="card-div-img" src={item.image1} alt="image" />
         <h3>{item.model}</h3>

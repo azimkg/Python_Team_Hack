@@ -10,7 +10,15 @@ const AirKing = () => {
   }, []);
   const [searchParams, setSearchParams] = useSearchParams();
 
- 
+  useEffect(() => {
+    setSearchParams({
+      type: "airking",
+    });
+  }, []);
+
+  useEffect(() => {
+    getWatch();
+  }, [searchParams]);
   return (
     <div className="yachtMaster">
       {rolex.map((item) => (

@@ -8,8 +8,15 @@ const YachtMaster = () => {
   useEffect(() => {
     getWatch();
   }, []);
-//   const [searchParams, setSearchParams] = useSearchParams();
-
+  const [searchParams, setSearchParams] = useSearchParams();
+  useEffect(() => {
+    setSearchParams({
+      type: "yacht",
+    });
+  }, []);
+  useEffect(() => {
+    getWatch();
+  }, [searchParams]);
 
   return (
     <div className="yachtMaster">

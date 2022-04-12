@@ -31,6 +31,7 @@ const AddWatch = () => {
   const [desc, setDesc] = useState("");
   const [image2, setImage2] = useState("");
   const [type, setType] = useState("");
+  const [price, setPrice] = useState("");
 
   const onFinish = (values) => {
     console.log(values);
@@ -49,6 +50,7 @@ const AddWatch = () => {
       titles,
       desc,
       image2,
+      price,
       type,
     };
     handleAddWatch(newWatch);
@@ -60,6 +62,7 @@ const AddWatch = () => {
     setDesc("");
     setTitles("");
     setType("");
+    setPrice("");
   }
 
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -109,6 +112,13 @@ const AddWatch = () => {
           </Form.Item>
           <Form.Item label="Image 2">
             <Input value={image2} onChange={(e) => setImage2(e.target.value)} />
+          </Form.Item>
+          <Form.Item label="Price">
+            <Input
+              type="number"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+            />
           </Form.Item>
           <Form.Item label="Type">
             <Input value={type} onChange={(e) => setType(e.target.value)} />
