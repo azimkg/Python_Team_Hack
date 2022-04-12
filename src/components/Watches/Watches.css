@@ -1,0 +1,57 @@
+.watch-container {
+}
+.header-video {
+  width: 100%;
+}
+.watches-title {
+  width: 100%;
+  max-width: 75%;
+  margin: 40px auto;
+  font-size: 18px;
+}
+.watches-h1 {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.watches-p {
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.watches-div-h3 {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.watches-h3 {
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.carousel-caption {
+  margin: 40px 0;
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+.carousel-div {
+  margin: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  overflow: hidden;
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.carousel-img {
+  display: block;
+  transition: 1s;
+}
+.carousel-img:hover {
+  transform: scale(0.9);
+}
