@@ -10,6 +10,13 @@
   max-height: 40px;
   z-index: 999;
   margin-top: 10px;
+  cursor: pointer;
+}
+.icon-bars-fav {
+  max-width: 30px;
+  max-height: 40px;
+  z-index: 999;
+  margin-top: 10px;
 }
 .menu-bars {
   margin-left: 3rem;
@@ -17,7 +24,30 @@
   background: none;
   display: flex;
 }
+.menu-bars-fav {
+  margin-left: 3rem;
+  font-size: 1.5rem;
+  background: none;
+  display: flex;
+}
+.menu-bars-fav-close {
+  margin-left: 18rem;
+  font-size: 1.5rem;
+  background: none;
+  display: flex;
+}
 .bars-text {
+  font-size: 26px;
+  font-weight: 600;
+  padding-left: 10px;
+  align-items: center;
+  display: flex;
+  transform: translate(0, 30%);
+  color: #000;
+  letter-spacing: 1.2px;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+.bars-text-fav {
   font-size: 26px;
   font-weight: 600;
   padding-left: 10px;
@@ -51,7 +81,67 @@
   overflow-y: scroll;
   overflow-x: hidden;
 }
+.nav-menu-fav {
+  z-index: 8888;
+  background-color: #f8f8f8;
+  max-width: 500px;
+  padding: 50px 70px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: 850ms;
+  display: block;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.fav-title {
+  /* padding-right: 100px; */
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  border-bottom: 1px grey solid;
+}
+.fav-text {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+.btn-fav {
+  border: 1px solid rgb(18, 120, 74);
+  border-radius: 25px;
+  padding: 6px 30px;
+  font-size: 24px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 600;
+  color: rgb(18, 120, 74);
+  transition: 1s;
+}
+.btn-fav:hover {
+  background-color: rgb(18, 120, 74);
+  color: white;
+}
+.icon-fav {
+  transform: translate(75%, 50%);
+}
+.icon-fav:hover {
+  fill: white;
+}
+.fav-close-block {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.fav-close-block:hover {
+  background-color: rgb(18, 120, 74);
+}
 .nav-menu::-webkit-scrollbar {
+  width: 0px;
+}
+.nav-menu-fav::-webkit-scrollbar {
   width: 0px;
 }
 
@@ -60,6 +150,7 @@
   justify-content: space-between;
 }
 .menu {
+  cursor: pointer;
   margin-right: 40px;
   align-items: center;
   display: flex;
@@ -86,6 +177,10 @@
 
 .nav-menu.active {
   left: 0;
+  transition: 350ms;
+}
+.nav-menu-fav.active-fav {
+  right: 0;
   transition: 350ms;
 }
 .icon-img-menu {
