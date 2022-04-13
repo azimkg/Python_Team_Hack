@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import icon from "../assets/icon.svg";
 import fabars from "../assets/fabars.png";
@@ -17,6 +17,7 @@ import { Autoplay, Scrollbar } from "swiper";
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
+  const navigate = useNavigate();
 
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -28,7 +29,12 @@ function Navbar() {
             <img className="icon-bars" src={fabars} />
             <p className="bars-text">Меню</p>
           </Link>
-          <img src={icon} alt="" className="icon-img" />
+          <img
+            onClick={() => navigate("/")}
+            src={icon}
+            alt=""
+            className="icon-img"
+          />
           <div className="menu-right">
             <div className="menu">
               <img src={search} alt="Поиск" />

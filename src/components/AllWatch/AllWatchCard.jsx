@@ -14,6 +14,7 @@ const AllWatchCard = ({ item }) => {
           backgroundColor: "rgb(195, 192, 192)",
           padding: "5px",
           color: "white",
+          cursor: "pointer",
         }}
       />
       <div className="cardest">

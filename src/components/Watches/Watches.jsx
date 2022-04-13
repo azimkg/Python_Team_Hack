@@ -4,6 +4,7 @@ import "./Watches.css";
 import AllWatch from "../AllWatch/AllWatch";
 
 const Watches = () => {
+  
   return (
     <div className="watch-container">
       <div className="header">
@@ -40,7 +41,7 @@ const Watches = () => {
                     alt="image"
                   />
                   <h2 className="carousel-h2"> DAY-DATE</h2>
-                  <p>Квинтэссенция престижа в мире часов</p>
+                  <p className="pi">Квинтэссенция престижа в мире часов</p>
                 </div>
                 <div className="carousel-div">
                   <img
@@ -49,7 +50,7 @@ const Watches = () => {
                     alt="image"
                   />
                   <h2 className="carousel-h2"> DATEJUST</h2>
-                  <p>Эталон классических часов</p>
+                  <p className="pi">Эталон классических часов</p>
                 </div>
                 <div className="carousel-div">
                   <img
@@ -58,7 +59,7 @@ const Watches = () => {
                     alt="image"
                   />
                   <h2 className="carousel-h2"> OYSTER PERPETUAL</h2>
-                  <p>Квинтэссенция Oyster</p>
+                  <p className="pi">Квинтэссенция Oyster</p>
                 </div>
               </div>
             </div>
@@ -71,7 +72,7 @@ const Watches = () => {
                     alt="image"
                   />
                   <h2 className="carousel-h2"> LADY-DATEJUST</h2>
-                  <p>Элегантность по-женски</p>
+                  <p className="pi">Элегантность по-женски</p>
                 </div>
                 <div className="carousel-div">
                   <img
@@ -80,7 +81,7 @@ const Watches = () => {
                     alt="image"
                   />
                   <h2 className="carousel-h2"> SKY-DWELLER</h2>
-                  <p>Контроль за временем по всему миру</p>
+                  <p className="pi">Контроль за временем по всему миру</p>
                 </div>
                 <div className="carousel-div">
                   <img
@@ -89,7 +90,7 @@ const Watches = () => {
                     alt="image"
                   />
                   <h2 className="carousel-h2">CELLINI</h2>
-                  <p>Классические часы</p>
+                  <p className="pi">Классические часы</p>
                 </div>
               </div>
             </div>
@@ -98,45 +99,45 @@ const Watches = () => {
         <div className="watches-div-h3">
           <h3 className="watches-h3">Профессиональные часы</h3>
         </div>
-        <div className="carousel-caption">
+        <div className="carousel-caption1">
           <Carousel autoplay>
             <div>
               <div className="carousel">
                 <div className="carousel-div">
                   <img
-                    className="carousel-img"
+                    className="carousel-img1"
                     src="https://content.rolex.com/dam/new-watches-2022/homepage/roller-family/homepage-new-watches-2022-roller-watches-air-king-family-m126900-0001_portrait.jpg?imwidth=420, https://content.rolex.com/dam/new-watches-2022/homepage/roller-family/homepage-new-watches-2022-roller-watches-air-king-family-m126900-0001_portrait.jpg?imwidth=840 2x"
                     alt="image"
                   />
                   <h2 className="carousel-h2">AIR-KING</h2>
-                  <p>Часы для авиаторов</p>
+                  <p className="pi">Часы для авиаторов</p>
                 </div>
                 <div className="carousel-div">
                   <img
-                    className="carousel-img"
+                    className="carousel-img1"
                     src="https://content.rolex.com/dam/new-watches-2020/homepage/roller/all-watches/watches_0004_m126711chnr-0002-gmt-master-ii_portrait.jpg?imwidth=420, https://content.rolex.com/dam/new-watches-2020/homepage/roller/all-watches/watches_0004_m126711chnr-0002-gmt-master-ii_portrait.jpg?imwidth=840 2x"
                     alt="image"
                   />
                   <h2 className="carousel-h2"> GMT-MASTER ||</h2>
-                  <p>Часы для путешественников</p>
+                  <p className="pi">Часы для путешественников</p>
                 </div>
                 <div className="carousel-div">
                   <img
-                    className="carousel-img"
+                    className="carousel-img1"
                     src="https://content.rolex.com/dam/new-watches-2022/homepage/roller-family/homepage-new-watches-2022-roller-watches-yacht-master-family-m226658-0001_portrait.jpg?imwidth=420, https://content.rolex.com/dam/new-watches-2022/homepage/roller-family/homepage-new-watches-2022-roller-watches-yacht-master-family-m226658-0001_portrait.jpg?imwidth=840 2x"
                     alt="image"
                   />
                   <h2 className="carousel-h2">YACHT-MASTER</h2>
-                  <p>Часы морских просторов</p>
+                  <p className="pi">Часы морских просторов</p>
                 </div>
                 <div className="carousel-div">
                   <img
-                    className="carousel-img"
+                    className="carousel-img1"
                     src="https://content.rolex.com/dam/new-watches-2020/homepage/roller/all-watches/watches_0008_m124060-0001-submariner_portrait.jpg?imwidth=420, https://content.rolex.com/dam/new-watches-2020/homepage/roller/all-watches/watches_0008_m124060-0001-submariner_portrait.jpg?imwidth=840 2x"
                     alt="image"
                   />
                   <h2 className="carousel-h2">SUBMARINER</h2>
-                  <p>Эталон часов для дайверов</p>
+                  <p className="pi">Эталон часов для дайверов</p>
                 </div>
               </div>
             </div>
@@ -144,39 +145,39 @@ const Watches = () => {
               <div className="carousel">
                 <div className="carousel-div">
                   <img
-                    className="carousel-img"
+                    className="carousel-img1"
                     src="https://content.rolex.com/dam/new-watches-2021/homepage/roller/all-watches/watches_0012_m116519ln-0038-cosmograph-daytona_portrait.jpg?imwidth=420, https://content.rolex.com/dam/new-watches-2021/homepage/roller/all-watches/watches_0012_m116519ln-0038-cosmograph-daytona_portrait.jpg?imwidth=840 2x"
                     alt="image"
                   />
                   <h2 className="carousel-h2">COSMOGRAPH DAYTONA</h2>
-                  <p>Созданные специально для гонок</p>
+                  <p className="pi">Созданные специально для гонок</p>
                 </div>
                 <div className="carousel-div">
                   <img
-                    className="carousel-img"
+                    className="carousel-img1"
                     src="https://content.rolex.com/dam/new-watches-2020/homepage/roller/all-watches/watches_0005_m126603-0001-sea-dweller_portrait.jpg?imwidth=420, https://content.rolex.com/dam/new-watches-2020/homepage/roller/all-watches/watches_0005_m126603-0001-sea-dweller_portrait.jpg?imwidth=840 2x"
                     alt="image"
                   />
                   <h2 className="carousel-h2">SEA-DWELLER</h2>
-                  <p>Часы для покорения морских глубин</p>
+                  <p className="pi">Часы для покорения морских глубин</p>
                 </div>
                 <div className="carousel-div">
                   <img
-                    className="carousel-img"
+                    className="carousel-img1"
                     src="https://content.rolex.com/dam/new-watches-2021/homepage/roller/all-watches/watches_0004_m124273-0001-explorer_portrait.jpg?imwidth=420, https://content.rolex.com/dam/new-watches-2021/homepage/roller/all-watches/watches_0004_m124273-0001-explorer_portrait.jpg?imwidth=840 2x"
                     alt="image"
                   />
                   <h2 className="carousel-h2">EXPLORER</h2>
-                  <p>Зов горных вершин</p>
+                  <p className="pi">Зов горных вершин</p>
                 </div>
                 <div className="carousel-div">
                   <img
-                    className="carousel-img"
+                    className="carousel-img1"
                     src="https://content.rolex.com/dam/new-watches-2020/homepage/roller/all-watches/watches_0012_m116400gv-0002-milgauss_portrait.jpg?imwidth=420, https://content.rolex.com/dam/new-watches-2020/homepage/roller/all-watches/watches_0012_m116400gv-0002-milgauss_portrait.jpg?imwidth=840 2x"
                     alt="image"
                   />
                   <h2 className="carousel-h2">MILGAUS</h2>
-                  <p>Прославляя науку</p>
+                  <p className="pi">Прославляя науку</p>
                 </div>
               </div>
             </div>

@@ -3,8 +3,8 @@ import { Pagination, Spin } from "antd";
 import React, { useContext, useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import { rolexContext } from "../../context/rolexContext";
-import "./Details.css";
 import DetailsAny from "./DetailsAny";
+import "./Details.css";
 
 const Details = () => {
   const { rolexEdit, editWatch, rolex, getWatch, countRolex } =
@@ -12,13 +12,13 @@ const Details = () => {
   const [edit, setEdit] = useState("");
   const params = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
-  useEffect(() => {
-    editWatch(params.id);
-  }, []);
   const [page, setPage] = useState(
     searchParams.get("_page") ? searchParams.get("_page") : 1
   );
   const [limit, setLimit] = useState(3);
+  useEffect(() => {
+    editWatch(params.id);
+  }, [params.id]);
 
   useEffect(() => {
     setEdit(rolexEdit);

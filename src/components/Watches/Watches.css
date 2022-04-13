@@ -33,6 +33,9 @@
 .carousel-caption {
   margin: 40px 0;
 }
+.carousel-caption1 {
+  margin: 40px 0;
+}
 .carousel {
   display: flex;
   justify-content: center;
@@ -52,6 +55,72 @@
   display: block;
   transition: 1s;
 }
+.carousel-img1 {
+  display: block;
+  transition: 1s;
+}
 .carousel-img:hover {
   transform: scale(0.9);
+  cursor: pointer;
+}
+.carousel-img1:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+@media (max-width: 950px) {
+  .carousel-h2 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 850px) {
+  .carousel-h2 {
+    font-size: 14px;
+  }
+  .carousel-img1 {
+  }
+}
+@media (max-width: 768px) {
+  .carousel-h2 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .pi {
+    font-size: 12px;
+  }
+  .watches-title {
+    max-width: 80%;
+    margin: 30px auto;
+    font-size: 16px;
+  }
+}
+@media (max-width: 550px) {
+  .carousel-h2 {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .pi {
+    display: none;
+  }
+  .carousel-caption1 {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .watches-title {
+    max-width: 80%;
+    margin: 30px auto;
+    font-size: 12px;
+  }
+  .carousel-h2 {
+    font-size: 8px;
+    font-weight: bold;
+  }
+}
+@media (max-width: 350px) {
+  .watches-title {
+    max-width: 80%;
+    margin: 30px auto;
+    font-size: 10px;
+  }
 }

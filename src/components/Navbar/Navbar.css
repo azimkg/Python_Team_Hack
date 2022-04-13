@@ -33,6 +33,7 @@
   max-width: 120px;
   max-height: 85px;
   align-items: center;
+  cursor: pointer;
 }
 .nav-menu {
   z-index: 888;
