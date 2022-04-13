@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import icon from "../assets/icon.svg";
+import fabars from "../assets/fabars.png";
 import icon2 from "../assets/icon2.svg";
 import close2 from "../assets/icons-close.svg";
 import search from "../assets/search-icon.svg";
@@ -24,10 +25,7 @@ function Navbar() {
       <IconContext.Provider value={{ color: "#fff" }}>
         <div className="navbar">
           <Link to="#" className="menu-bars" onClick={showSidebar}>
-            <img
-              className="icon-bars"
-              src="https://cdn-icons.flaticon.com/png/512/3945/premium/3945664.png?token=exp=1649776294~hmac=6b6c676b30baf4a29c0c19659b40db74"
-            />
+            <img className="icon-bars" src={fabars} />
             <p className="bars-text">Меню</p>
           </Link>
           <img src={icon} alt="" className="icon-img" />
@@ -55,10 +53,24 @@ function Navbar() {
                 scrollbar={{
                   hide: true,
                 }}
+                breakpoints={{
+                  0: {
+                    width: 0,
+                    slidesPerView: 2,
+                  },
+                  480: {
+                    width: 480,
+                    slidesPerView: 2,
+                  },
+                  768: {
+                    width: 768,
+                    slidesPerView: 3,
+                  },
+                }}
                 slidesPerView={3}
                 spaceBetween={30}
                 autoplay={{
-                  delay: 2500,
+                  delay: 3500,
                   disableOnInteraction: false,
                 }}
                 modules={[Autoplay, Scrollbar]}
@@ -68,6 +80,7 @@ function Navbar() {
                   <div className="slide-block">
                     <Link to="/airking">
                       <img className="slide-img" src={airKing} alt="" />
+                      <p className="slide-block-text">AIR-KING</p>
                     </Link>
                   </div>
                 </SwiperSlide>
@@ -76,6 +89,7 @@ function Navbar() {
                   <div className="slide-block">
                     <Link to="/sky">
                       <img className="slide-img" src={sky} alt="" />
+                      <p className="slide-block-text">Sky-Dweller</p>
                     </Link>
                   </div>
                 </SwiperSlide>
@@ -83,6 +97,7 @@ function Navbar() {
                   <div className="slide-block">
                     <Link to="yacht">
                       <img className="slide-img" src={yacht} alt="" />
+                      <p className="slide-block-text">Yacht-Master</p>
                     </Link>
                   </div>
                 </SwiperSlide>
@@ -90,6 +105,7 @@ function Navbar() {
                   <div className="slide-block">
                     <Link to="datejust">
                       <img className="slide-img" src={dateJust} alt="" />
+                      <p className="slide-block-text">Datejust</p>
                     </Link>
                   </div>
                 </SwiperSlide>
