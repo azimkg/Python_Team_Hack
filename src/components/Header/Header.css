@@ -28,6 +28,8 @@
   border-radius: 100px;
   display: block;
   transition: 3s;
+  max-width: 100%;
+  padding-bottom: 50px;
 }
 .versatility-img-1:hover {
   transform: scale(1.1);
@@ -43,4 +45,12 @@
   padding-bottom: 50px;
   font-size: 24px;
   font-weight: 500;
+}
+@media (max-width: 780px) {
+  .header-title {
+    font-size: 20px;
+  }
+  .header-text {
+    font-size: 14px;
+  }
 }
