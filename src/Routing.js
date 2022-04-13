@@ -6,6 +6,7 @@ import DateJust from "./components/DateJust/DateJust";
 import EditedWatch from "./components/EditedWatch/EditedWatch";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar";
 import SkyDweller from "./components/SkyDweller/SkyDweller";
 import Watches from "./components/Watches/Watches";
 import YachtMaster from "./components/YactMaster/YachtMaster";
@@ -13,6 +14,7 @@ import YachtMaster from "./components/YactMaster/YachtMaster";
 const Routing = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <Header />
       <Routes>
         <Route path="/admin" element={<Admin />} />

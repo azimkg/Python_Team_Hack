@@ -1,0 +1,46 @@
+.header-section {
+  margin-top: 0;
+  padding-top: 50px;
+  background: radial-gradient(
+      at 13.4366% 50%,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0) 10%
+    ),
+    linear-gradient(rgb(238, 242, 246), rgb(234, 238, 236));
+}
+.header-title {
+  color: #436f7b;
+  line-height: 1.4;
+  font-size: 62px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+.header-text {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+.versatility-img-1 {
+  border-radius: 100px;
+  display: block;
+  transition: 3s;
+}
+.versatility-img-1:hover {
+  transform: scale(1.1);
+}
+.versatility {
+  margin-top: 100px;
+}
+.versatility-title {
+  display: inline-block;
+  overflow: hidden;
+  font-family: "Alegreya Sans SC", sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 24px;
+  font-weight: 500;
+}
