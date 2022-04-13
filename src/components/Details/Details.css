@@ -1,0 +1,12 @@
+.details-container {
+  background-image: url(https://content.rolex.com/dam/2021/bg/model-cover-background-variations-steel.jpg?imwidth=1920);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.details-start {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 70%;
+}
