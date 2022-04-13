@@ -3,10 +3,156 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 .details-start {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   max-width: 70%;
+  margin: 80px auto;
+}
+.details-heart {
+  color: white !important;
+
+  font-size: 30px;
+  max-width: 30px;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  margin-left: -200px;
+}
+.details-img {
+  width: 450px;
+  margin-left: -300px;
+}
+.details-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 16px;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+.details-title {
+  color: #fff;
+}
+.details-titles {
+  width: 100%;
+  max-width: 70%;
+  margin: 20px auto;
+  font-size: 50px;
+  font-weight: 800;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: rgb(81, 55, 55);
+}
+.details-p {
+  width: 100%;
+  max-width: 70%;
+  margin: 20px auto;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 24px;
+}
+.details-desc {
+  background-image: url(https://content.rolex.com/dam/2021/bg/model-cover-background-variations-steel.jpg?imwidth=1920);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 70%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  margin: 50px auto;
+}
+.details-image2 {
+  display: block;
+  transition: 3s;
+  width: 500px;
+}
+.details-image2:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.details-text {
+  width: 100%;
+  max-width: 80%;
+  text-align: center;
+  font-size: 16px;
+}
+.gallery-main {
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+}
+.gallery {
+  margin: 0 auto;
+  display: inline-block;
+  overflow: hidden;
+}
+.gallery-img {
+  width: 350px;
+  height: 350px;
+  display: block;
+  transition: 3s;
+}
+.gallery-img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.disttributor {
+  background-image: url(https://content.rolex.com/dam/2022/bg/showcase-overlay-landscape.png?impolicy=v6-model-showcase&c1path=/dam/2022/showcase/m126900-0001.jpg&sc1=0.498&imwidth=1080);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 70%;
+  margin: 50px auto;
+  height: 80vh;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.disttributor-title {
+  width: 100%;
+  max-width: 55%;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 18px;
+}
+.btnsa {
+  padding: 5px 40px;
+  border-radius: 100px;
+  border: none;
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+  transition: 2s;
+}
+.btnsa:hover {
+  background: rgb(14, 86, 68);
+  color: white;
+  cursor: pointer;
+}
+.details-any {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px auto;
+}
+.details-watches {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 2em;
+  font-weight: normal;
+}
+.details-pagination {
+  display: flex;
+  justify-content: center;
 }

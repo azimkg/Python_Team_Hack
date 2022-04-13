@@ -16,7 +16,6 @@ const Routing = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <Header />
       <Routes>
         <Route path="/admin" element={<Admin />} />
         <Route path="/yacht" element={<YachtMaster />} />
@@ -26,6 +25,7 @@ const Routing = () => {
         <Route path="/edit/:id" element={<EditedWatch />} />
         <Route path="/watches" element={<Watches />} />
         <Route path="/details/:id" element={<Details />} />
+        <Route path="/" element={<Header />} />
       </Routes>
       <Footer />
     </BrowserRouter>

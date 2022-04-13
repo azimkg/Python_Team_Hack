@@ -2,7 +2,7 @@ import { HeartOutlined } from "@ant-design/icons";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const AllWatchCard = ({ item }) => {
+const DetailsAny = ({ item }) => {
   return (
     <div>
       <HeartOutlined
@@ -30,4 +30,4 @@ const AllWatchCard = ({ item }) => {
   );
 };
 
-export default AllWatchCard;
+export default DetailsAny;

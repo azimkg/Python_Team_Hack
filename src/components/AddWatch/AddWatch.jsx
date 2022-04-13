@@ -40,7 +40,7 @@ const AddWatch = () => {
   function addWatch() {
     if (!image1 || !image2 || !titles || !model || !desc || !charac) {
       return setTimeout(() => {
-        message.error("Fill in all the fields!");
+        message.error("Заполните все поля!");
       }, 500);
     }
     let newWatch = {
