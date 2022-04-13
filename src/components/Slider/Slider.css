@@ -1,0 +1,23 @@
+.slider-block {
+  margin-right: 0;
+  width: 100%;
+  height: 100%;
+}
+.slider-img {
+  border-radius: 60px;
+  width: 100%;
+  height: 100%;
+}
+.slider-block-text {
+  margin-top: 20px;
+  color: black;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+.my-swiper {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
