@@ -15,7 +15,6 @@ const SkyDweller = () => {
       type: "skydweller",
     });
   }, []);
-
   useEffect(() => {
     getWatch();
   }, [searchParams]);
