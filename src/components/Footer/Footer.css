@@ -1,23 +1,23 @@
-.footer {
-  display: flex;
-  justify-content: space-around;
-  height: 390px;
-  background-color: rgb(36, 33, 33);
-  color: white;
-  margin: 0px;
-  font-size: 15px;
-  line-height: 25px;
-}
 ol:hover {
   color: rgb(77, 77, 3);
 }
 .footer {
   margin: 0;
-  padding: 0;
+  padding: 20px 50px;
   height: 100%;
-  width: 200%;
-  max-width: 1380px;
-  font-size: 0.94em;
+  width: 100%;
+  max-width: 100%;
+  font-size: 1.2em;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
+  background-color: rgb(36, 33, 33);
+  color: white;
+  margin: 0px;
+  line-height: 30px;
+}
+@media (max-width: 480px) {
+  .footer {
+    justify-content: start;
+  }
 }
