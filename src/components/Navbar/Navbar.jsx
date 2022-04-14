@@ -6,7 +6,6 @@ import fabars from "../assets/fabars.png";
 import icon2 from "../assets/icon2.svg";
 import close2 from "../assets/icons-close.svg";
 import search from "../assets/search-icon.svg";
-import heart from "../assets/heart.svg";
 import { IconContext } from "react-icons";
 import airKing from "../assets/air-king.webp";
 import dateJust from "../assets/dateJust.webp";
@@ -44,7 +43,19 @@ function Navbar() {
               <p>Поиск</p>
             </div>
             <div className="menu menu-bars-fav" onClick={showFavorites}>
-              <img className="icon-bars-fav" src={heart} alt="Подборка" />
+              <svg
+                className="heart icon-bars-fav"
+                width="25"
+                height="25"
+                fill="#000"
+                viewBox="0 0 15 15"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-hidden="true"
+                alt="Подборка"
+              >
+                <path d="m14.98 5.65c-.24 2.59-3.18 6.01-7.48 8.6-4.3-2.59-7.24-6.01-7.48-8.6s1.73-4.9 4.16-4.9 3.32 1.76 3.32 1.76.88-1.76 3.32-1.76 4.4 2.31 4.16 4.9z" />
+              </svg>
               <p className="bars-text-fav">Ваша подборка</p>
             </div>
           </div>
@@ -112,7 +123,7 @@ function Navbar() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="slide-block">
-                    <Link to="datejust">
+                    <Link to="/date-p">
                       <img className="slide-img" src={dateJust} alt="" />
                       <p className="slide-block-text">Datejust</p>
                     </Link>
