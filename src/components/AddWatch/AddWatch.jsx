@@ -80,7 +80,7 @@ const AddWatch = () => {
   };
   return (
     <div className="AddWatch">
-      <Button type="primary" onClick={showModal}>
+      <Button type="primary" className="custom-btn btn-13" onClick={showModal}>
         Add Watch
       </Button>
       <Modal
