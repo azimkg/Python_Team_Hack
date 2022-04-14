@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar/Navbar";
 import SkyDweller from "./components/SkyDweller/SkyDweller";
 import TopFooter from "./components/TopFooter/TopFooter";
 import Watches from "./components/Watches/Watches";
+import YachtPage from "./components/YachtPage/YachtPage";
 import YachtMaster from "./components/YactMaster/YachtMaster";
 
 const Routing = () => {
@@ -29,6 +30,7 @@ const Routing = () => {
         <Route path="/details/:id" element={<Details />} />
         <Route path="/date-p" element={<DateJustPage />} />
         <Route path="/" element={<Header />} />
+        <Route path="/ypage" element={<YachtPage />} />
       </Routes>
       <TopFooter />
       <Footer />

@@ -115,7 +115,7 @@ function Navbar() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="slide-block">
-                    <Link to="yacht">
+                    <Link to="ypage">
                       <img className="slide-img" src={yacht} alt="" />
                       <p className="slide-block-text">Yacht-Master</p>
                     </Link>

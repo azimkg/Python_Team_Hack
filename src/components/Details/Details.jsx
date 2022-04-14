@@ -55,7 +55,11 @@ const Details = () => {
       <p className="details-p">{edit.desc}</p>
       <div className="details-desc">
         <div style={{ display: "inline-block", overflow: "hidden" }}>
-          <img src={edit.image2} alt="image" className="details-image2" />
+          <img
+            src="https://content.rolex.com/dam/2022/harmonised/dial-raw-with-colored-shadow/51144_y_42.png?impolicy=v6-main-feature&sc1=0.7&c1x=750&c1y=750&ho1=-4&vo1=-15&imwidth=1920"
+            alt="image"
+            className="details-image2"
+          />
         </div>
         <div className="details-text">
           <h1

@@ -29,7 +29,6 @@ const AddWatch = () => {
   const [charac, setCharac] = useState("");
   const [titles, setTitles] = useState("");
   const [desc, setDesc] = useState("");
-  const [image2, setImage2] = useState("");
   const [type, setType] = useState("");
   const [price, setPrice] = useState("");
 
@@ -38,7 +37,7 @@ const AddWatch = () => {
   };
 
   function addWatch() {
-    if (!image1 || !image2 || !titles || !model || !desc || !charac) {
+    if (!image1 || !titles || !model || !desc || !charac) {
       return setTimeout(() => {
         message.error("Заполните все поля!");
       }, 500);
@@ -49,14 +48,12 @@ const AddWatch = () => {
       charac,
       titles,
       desc,
-      image2,
       price,
       type,
     };
     handleAddWatch(newWatch);
     handleOk();
     setImage1("");
-    setImage2("");
     setModel("");
     setCharac("");
     setDesc("");
@@ -109,9 +106,6 @@ const AddWatch = () => {
           </Form.Item>
           <Form.Item label="Description">
             <Input value={desc} onChange={(e) => setDesc(e.target.value)} />
-          </Form.Item>
-          <Form.Item label="Image 2">
-            <Input value={image2} onChange={(e) => setImage2(e.target.value)} />
           </Form.Item>
           <Form.Item label="Price">
             <Input
