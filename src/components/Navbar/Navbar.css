@@ -125,10 +125,13 @@
   color: white;
 }
 .icon-fav {
-  transform: translate(75%, 50%);
+  transform: translate(70%, 40%);
 }
-.icon-fav:hover {
-  fill: white;
+.heart {
+  cursor: pointer;
+}
+.heart:hover {
+  fill: rgb(18, 120, 74);
 }
 .fav-close-block {
   width: 50px;
@@ -137,7 +140,7 @@
   background-color: #fff;
 }
 .fav-close-block:hover {
-  background-color: rgb(18, 120, 74);
+  border: 1px solid rgb(18, 120, 74);
 }
 .nav-menu::-webkit-scrollbar {
   width: 0px;
@@ -307,6 +310,21 @@ span {
   .icon-bars {
     max-width: 25px;
     max-height: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .fav-title {
+    font-size: 26px;
+  }
+  .fav-text {
+    font-size: 20px;
+  }
+  .btn-fav {
+    font-size: 20px;
+  }
+  .fav-close-block {
+    margin-left: -150px;
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 400px) {

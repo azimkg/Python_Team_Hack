@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Admin from "./components/Admin/Admin";
 import AirKing from "./components/AirKing/AirKing";
 import DateJust from "./components/DateJust/DateJust";
+import DateJustPage from "./components/DateJustPage/DateJustPage";
 import Details from "./components/Details/Details";
 import EditedWatch from "./components/EditedWatch/EditedWatch";
 import Footer from "./components/Footer/Footer";
@@ -26,6 +27,7 @@ const Routing = () => {
         <Route path="/edit/:id" element={<EditedWatch />} />
         <Route path="/watches" element={<Watches />} />
         <Route path="/details/:id" element={<Details />} />
+        <Route path="/date-p" element={<DateJustPage />} />
         <Route path="/" element={<Header />} />
       </Routes>
       <TopFooter />
