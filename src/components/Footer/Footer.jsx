@@ -52,7 +52,7 @@ const Footer = () => {
         <ul>
           <div className="social">
             <a
-              style={{ color: "white" }}
+              style={{ color: "white", cursor: "pointer" }}
               target={"_blank"}
               href="https://www.instagram.com/rolex/"
             >
@@ -61,7 +61,7 @@ const Footer = () => {
             </a>
             <ol>
               <a
-                style={{ color: "white" }}
+                style={{ color: "white", cursor: "pointer" }}
                 target={"_blank"}
                 href="https://www.facebook.com/rolex"
               >
@@ -70,7 +70,7 @@ const Footer = () => {
               </a>
               <ol>
                 <a
-                  style={{ color: "white" }}
+                  style={{ color: "white", cursor: "pointer" }}
                   target={"_blank"}
                   href="https://www.youtube.com/rolex"
                 >
@@ -79,7 +79,7 @@ const Footer = () => {
                 </a>
                 <ol>
                   <a
-                    style={{ color: "white" }}
+                    style={{ color: "white", cursor: "pointer" }}
                     target={"_blank"}
                     href="https://twitter.com/rolex"
                   >
