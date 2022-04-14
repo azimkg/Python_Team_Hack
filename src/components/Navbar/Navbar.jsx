@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import icon from "../assets/icon.svg";
 import fabars from "../assets/fabars.png";
@@ -14,10 +14,12 @@ import sky from "../assets/sky.webp";
 import yacht from "../assets/yacht.webp";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import { Autoplay, Scrollbar } from "swiper";
+import CartRolex from "../CartRolex/CartRolex";
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
   const [favorites, setFavorites] = useState(false);
+  const navigate = useNavigate();
 
   const showSidebar = () => setSidebar(!sidebar);
   const showFavorites = () => setFavorites(!favorites);
@@ -30,7 +32,12 @@ function Navbar() {
             <img className="icon-bars" src={fabars} />
             <p className="bars-text">Меню</p>
           </div>
-          <img src={icon} alt="" className="icon-img" />
+          <img
+            src={icon}
+            alt="icon"
+            onClick={() => navigate("/")}
+            className="icon-img"
+          />
           <div className="menu-right">
             <div className="menu">
               <img src={search} alt="Поиск" />
@@ -156,6 +163,7 @@ function Navbar() {
             Редактировать подборку, управлять подборкой.
           </p>
           <button className="btn-fav">Поиск часов Rolex</button>
+          <CartRolex />
         </nav>
       </IconContext.Provider>
     </>

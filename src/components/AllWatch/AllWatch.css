@@ -1,6 +1,18 @@
 .container-cards {
-  margin-top: 50px;
+  margin-top: 70px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.heartOut {
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(195, 192, 192);
+  padding: 5px;
+  cursor: pointer;
+}
+.heartOut:hover {
+  background-color: rgb(128, 123, 123);
 }

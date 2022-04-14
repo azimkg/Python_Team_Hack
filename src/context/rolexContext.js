@@ -8,6 +8,7 @@ export const rolexContext = React.createContext();
 const INIT_STATE = {
   rolex: [],
   editRolex: null,
+  countRolex: 0,
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -16,6 +17,7 @@ const reducer = (state = INIT_STATE, action) => {
       return {
         ...state,
         rolex: action.payload.data,
+        countRolex: action.payload.headers["x-total-count"],
       };
     case GET_EDIT_WATCH:
       return {
@@ -62,6 +64,7 @@ const RolexContextProvider = ({ children }) => {
   return (
     <rolexContext.Provider
       value={{
+        countRolex: state.countRolex,
         rolex: state.rolex,
         rolexEdit: state.rolexEdit,
         getWatch,
