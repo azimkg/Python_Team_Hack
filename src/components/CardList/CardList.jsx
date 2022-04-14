@@ -5,7 +5,6 @@ import { rolexContext } from "../../context/rolexContext";
 
 const CardList = ({ item }) => {
   const { handleWatchDelete } = useContext(rolexContext);
-
   return (
     <div className="cardest">
       <div className="card-div">

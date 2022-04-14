@@ -1,0 +1,109 @@
+.yacht-pages-video {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.yacht-pages-video2 {
+  background-image: url(https://content.rolex.com/dam/new-watches-2021/watch-on-time/m226659-0002/landscape_big.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.yacht-pages-text {
+  width: 100%;
+  max-width: 70%;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 34px;
+  font-weight: bold;
+  padding-top: 70px;
+}
+.yacht-pages-text1 {
+  width: 100%;
+  max-width: 70%;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ypages {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+}
+.ypage1 {
+  display: inline-block;
+  overflow: hidden;
+  width: 60%;
+}
+.ypage1-img {
+  width: 100%;
+  transition: 2s;
+}
+.ypage1-img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.ypage2 {
+  width: 40%;
+  padding-left: 20px;
+}
+.ypage-text {
+  font-size: 22px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: bold;
+}
+.ypage-texts {
+  font-size: 20px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+}
+.yacht-pages-videos {
+  background-image: url(https://content.rolex.com/dam/watches/family-pages/yacht-master/professional-watches-yacht-master_rolexcom_yachtmaster40_m126622_0002_rolesium_001.jpg?imwidth=1920);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.yacht-pages-title {
+  margin-top: 100px;
+  color: #fff;
+  width: 100%;
+  max-width: 50%;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: bold;
+}
+.yacht-pages-titles {
+  color: #fff;
+  width: 100%;
+  max-width: 50%;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+.container_ypage {
+  width: 100%;
+  max-width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+.image-ypage {
+  width: 400px;
+}
+.category-text {
+  font-family: "Alegreya Sans SC", sans-serif;
+  text-align: center;
+}
