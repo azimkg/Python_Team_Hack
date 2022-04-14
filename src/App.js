@@ -3,11 +3,14 @@ import Routing from "./Routing";
 import "antd/dist/antd.css";
 import RolexContextProvider from "./context/rolexContext";
 import "./App.css";
+import FanContextProvider from "./context/cartRolex";
 
 const App = () => {
   return (
     <RolexContextProvider>
-      <Routing />
+      <FanContextProvider>
+        <Routing />
+      </FanContextProvider>
     </RolexContextProvider>
   );
 };

@@ -1,0 +1,17 @@
+.cart-list {
+  margin: 50px auto;
+}
+.cart-form {
+  margin: 10px 250px 0px 5px;
+  font-size: 26px;
+  cursor: pointer;
+}
+.card-divs {
+  text-align: center;
+  width: 350px;
+  height: 470px;
+  margin: 0px 20px 30px;
+  background-color: white;
+  display: inline-block;
+  overflow: hidden;
+}

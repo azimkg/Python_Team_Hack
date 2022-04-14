@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import SkyDweller from "./components/SkyDweller/SkyDweller";
+import TopFooter from "./components/TopFooter/TopFooter";
 import Watches from "./components/Watches/Watches";
 import YachtMaster from "./components/YactMaster/YachtMaster";
 
@@ -27,6 +28,7 @@ const Routing = () => {
         <Route path="/details/:id" element={<Details />} />
         <Route path="/" element={<Header />} />
       </Routes>
+      <TopFooter />
       <Footer />
     </BrowserRouter>
   );

@@ -14,25 +14,28 @@ import sky from "../assets/sky.webp";
 import yacht from "../assets/yacht.webp";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import { Autoplay, Scrollbar } from "swiper";
+import CartRolex from "../CartRolex/CartRolex";
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
+  const [favorites, setFavorites] = useState(false);
   const navigate = useNavigate();
 
   const showSidebar = () => setSidebar(!sidebar);
+  const showFavorites = () => setFavorites(!favorites);
 
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <div className="navbar">
-          <Link to="#" className="menu-bars" onClick={showSidebar}>
+          <div className="menu-bars" onClick={showSidebar}>
             <img className="icon-bars" src={fabars} />
             <p className="bars-text">Меню</p>
-          </Link>
+          </div>
           <img
-            onClick={() => navigate("/")}
             src={icon}
-            alt=""
+            alt="icon"
+            onClick={() => navigate("/")}
             className="icon-img"
           />
           <div className="menu-right">
@@ -40,9 +43,9 @@ function Navbar() {
               <img src={search} alt="Поиск" />
               <p>Поиск</p>
             </div>
-            <div className="menu">
-              <img src={heart} alt="Подборка" />
-              <p>Ваша подборка</p>
+            <div className="menu menu-bars-fav" onClick={showFavorites}>
+              <img className="icon-bars-fav" src={heart} alt="Подборка" />
+              <p className="bars-text-fav">Ваша подборка</p>
             </div>
           </div>
         </div>
@@ -132,6 +135,35 @@ function Navbar() {
               </Link>
             </div>
           </ul>
+        </nav>
+        <nav className={favorites ? "nav-menu-fav active-fav" : "nav-menu-fav"}>
+          <ul onClick={showFavorites}>
+            <li className="navbar-toggle-fav">
+              <Link to="#" className="menu-bars-fav-close">
+                <div className="fav-close-block">
+                  <svg
+                    className="icon-fav"
+                    width="20"
+                    height="20"
+                    fill="rgb(18, 120, 74)"
+                    viewBox="0 0 15 15"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-hidden="true"
+                    alt=""
+                  >
+                    <path d="m8.9 7.5 6.1 6.1-1.4 1.4-6.1-6.1-6.1 6.1-1.4-1.4 6.1-6.1-6.1-6.1 1.4-1.4 6.1 6.1 6.1-6.1 1.4 1.4z" />
+                  </svg>
+                </div>
+              </Link>
+            </li>
+          </ul>
+          <h2 className="fav-title">ВАША ПОДБОРКА</h2>
+          <p className="fav-text">
+            Редактировать подборку, управлять подборкой.
+          </p>
+          <button className="btn-fav">Поиск часов Rolex</button>
+          <CartRolex />
         </nav>
       </IconContext.Provider>
     </>

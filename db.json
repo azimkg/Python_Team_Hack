@@ -142,6 +142,17 @@
       "price": 4100,
       "type": "yacht",
       "id": 14
+    },
+    {
+      "image1": "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m126900-0001.png?imwidth=420",
+      "model": "AIR-KING",
+      "charac": "Oyster, 40 мм, сталь Oystersteel",
+      "titles": "ЧАСЫ AIR-KING, КОРПУС ДИАМЕТРОМ 40 ММ, CТАЛЬ OYSTERSTEEL; БРАСЛЕТ: OYSTER, МАССИВНЫЕ ЗВЕНЬЯ, ЗАСТЕЖКА OYSTERCLASP; ЦИФЕРБЛАТ: ЧЕРНЫЙ. ЭТА МОДЕЛЬ УВЕКОВЕЧИВАЕТ АВИАЦИОННОЕ НАСЛЕДИЕ ОРИГИНАЛЬНЫХ ЧАСОВ ROLEX OYSTER.",
+      "desc": "Часы Oyster Perpetual Air-King воздают честь пионерам авиации и напоминают о той роли, которую сыграли часы линии Oyster в покорении неба.",
+      "image2": "https://content.rolex.com/dam/2022/harmonised/dial-raw-with-colored-shadow/52036_g_40.png?impolicy=v6-main-feature&sc1=0.7&c1x=750&c1y=750&ho1=-1&vo1=-3&imwidth=1920",
+      "price": "3600",
+      "type": "airking",
+      "id": 15
     }
   ]
 }

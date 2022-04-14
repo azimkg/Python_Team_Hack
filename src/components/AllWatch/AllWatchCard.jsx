@@ -1,21 +1,21 @@
 import { HeartOutlined } from "@ant-design/icons";
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { cartContext } from "../../context/cartRolex";
 
 const AllWatchCard = ({ item }) => {
+  const { addFans, checkFans } = useContext(cartContext);
+  const [like, setLike] = useState(checkFans(item.id));
+  function clickFan() {
+    addFans(item);
+    setLike(checkFans(item.id));
+  }
   return (
     <div>
       <HeartOutlined
-        style={{
-          fontSize: "20px",
-          width: "30px",
-          height: "30px",
-          borderRadius: "50%",
-          backgroundColor: "rgb(195, 192, 192)",
-          padding: "5px",
-          color: "white",
-          cursor: "pointer",
-        }}
+        className="heartOut"
+        style={{ color: "white" }}
+        onClick={clickFan}
       />
       <div className="cardest">
         <div className="card-div">

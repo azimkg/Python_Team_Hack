@@ -41,7 +41,6 @@ const Header = () => {
           <h1 className="versatility-title">Многогранность Rolex</h1>
           <img src={versImg1} alt="" className="versatility-img-1" />
         </div>
-        <TopFooter />
       </div>
     </>
   );
