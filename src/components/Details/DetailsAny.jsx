@@ -12,13 +12,13 @@ const DetailsAny = ({ item }) => {
   }
   return (
     <div>
-      <HeartOutlined
-        className="heartOut"
-        style={{ color: "white" }}
-        onClick={clickFan}
-      />
       <div className="cardest">
-        <div className="card-div">
+        <div className="card-div1">
+          <HeartOutlined
+            className="heartOut"
+            style={{ color: "white" }}
+            onClick={clickFan}
+          />
           <Link to={`/details/${item.id}`}>
             <img className="card-div-img" src={item.image1} alt="image" />
           </Link>

@@ -1,0 +1,27 @@
+.container-kg {
+  width: 100%;
+  max-width: 60%;
+  border: 1px solid grey;
+  margin: 20px auto;
+  height: 60vh;
+  margin-bottom: 100px;
+}
+.container-kg-message {
+  width: 100%;
+  height: 60vh;
+  border: 1px solid gray;
+  overflow-y: auto;
+}
+.container-spinner {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+}
+.container-chat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

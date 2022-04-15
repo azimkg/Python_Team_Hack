@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Admin from "./components/Admin/Admin";
 import AirKing from "./components/AirKing/AirKing";
+import Auth from "./components/Auth/Auth";
+import Chat from "./components/Chat/Chat";
 import DateJust from "./components/DateJust/DateJust";
 import DateJustPage from "./components/DateJustPage/DateJustPage";
 import Details from "./components/Details/Details";
@@ -31,6 +33,8 @@ const Routing = () => {
         <Route path="/date-p" element={<DateJustPage />} />
         <Route path="/" element={<Header />} />
         <Route path="/ypage" element={<YachtPage />} />
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/chat" element={<Chat />} />
       </Routes>
       <TopFooter />
       <Footer />
