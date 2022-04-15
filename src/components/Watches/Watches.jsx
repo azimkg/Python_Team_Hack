@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "antd";
 import "./Watches.css";
 import AllWatch from "../AllWatch/AllWatch";
+import Search from "../Search/Search";
+import Filters from "../Filter/Filter";
+import { useSearchParams } from "react-router-dom";
 
 const Watches = () => {
-  
+  const [price, setPrice] = useState([1, 6000]);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [showFilters, setShowFilters] = useState(false);
+  useEffect(() => {
+    setSearchParams({
+      price_gte: price[0],
+      price_lte: price[1],
+    });
+  }, [price]);
   return (
     <div className="watch-container">
       <div className="header">
@@ -193,6 +204,14 @@ const Watches = () => {
             модели, материалы, безели, циферблаты и браслеты, и найдите часы,
             которые подходят именно Вам.
           </p>
+        </div>
+        <Search />
+        <div
+          style={{ cursor: "pointer", marginLeft: "4.5%" }}
+          onClick={() => setShowFilters(!showFilters)}
+        >
+          {showFilters ? <h3>HIDE FILTERS</h3> : <h3>SHOW FILTERS</h3>}
+          {showFilters ? <Filters price={price} setPrice={setPrice} /> : null}
         </div>
         <AllWatch />
       </div>
