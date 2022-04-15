@@ -1,10 +1,11 @@
 import React from "react";
 import { Slider } from "antd";
+import "./Filter.css";
 
 const Filters = ({ price, setPrice }) => {
   return (
     <div>
-      <h3>Filter by price</h3>
+      <h3>Фильтр по цене</h3>
       <Slider
         value={price}
         onChange={(e) => setPrice(e)}
