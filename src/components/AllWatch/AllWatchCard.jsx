@@ -1,4 +1,4 @@
-import { HeartOutlined } from "@ant-design/icons";
+import { HeartOutlined, LikeOutlined } from "@ant-design/icons";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { cartContext } from "../../context/cartRolex";
@@ -12,13 +12,17 @@ const AllWatchCard = ({ item }) => {
   }
   return (
     <div>
-      <HeartOutlined
-        className="heartOut"
-        style={{ color: "white" }}
-        onClick={clickFan}
-      />
       <div className="cardest">
-        <div className="card-div">
+        <div className="card-div1">
+          <div className="icons-div">
+            <HeartOutlined
+              className="heartOut"
+              style={{ color: "white" }}
+              onClick={clickFan}
+            />
+            <LikeOutlined className="likeOuts" style={{ color: "white" }} />
+          </div>
+
           <Link to={`/details/${item.id}`}>
             <img className="card-div-img" src={item.image1} alt="image" />
           </Link>

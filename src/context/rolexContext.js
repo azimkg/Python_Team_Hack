@@ -56,6 +56,7 @@ const RolexContextProvider = ({ children }) => {
     });
   }
 
+  console.log(INIT_STATE.rolex);
   async function handleEditWatch(id, edited) {
     await axios.patch(`${ROLEX_API}/${id}`, edited);
     getWatch();

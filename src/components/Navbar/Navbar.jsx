@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import icon from "../assets/icon.svg";
 import fabars from "../assets/fabars.png";
 import icon2 from "../assets/icon2.svg";
 import close2 from "../assets/icons-close.svg";
-import search from "../assets/search-icon.svg";
 import { IconContext } from "react-icons";
 import airKing from "../assets/air-king.webp";
 import dateJust from "../assets/dateJust.webp";
@@ -14,8 +13,11 @@ import yacht from "../assets/yacht.webp";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import { Autoplay, Scrollbar } from "swiper";
 import CartRolex from "../CartRolex/CartRolex";
+import { LoginOutlined, LogoutOutlined } from "@ant-design/icons";
+import { authContext } from "../../context/authContext";
 
 function Navbar() {
+  const { currentUser, handleLogout } = useContext(authContext);
   const [sidebar, setSidebar] = useState(false);
   const [favorites, setFavorites] = useState(false);
   const navigate = useNavigate();
@@ -38,10 +40,24 @@ function Navbar() {
             className="icon-img"
           />
           <div className="menu-right">
-            <div className="menu">
-              <img src={search} alt="Поиск" />
-              <p>Поиск</p>
-            </div>
+            {currentUser ? (
+              <div className="menu">
+                <LogoutOutlined
+                  className="user-outlined"
+                  onClick={() => handleLogout()}
+                />
+                <p style={{ cursor: "pointer" }}>Выйти</p>
+              </div>
+            ) : (
+              <div className="menu">
+                <LoginOutlined
+                  className="user-outlined"
+                  onClick={() => navigate("/auth")}
+                />
+                <p style={{ cursor: "pointer" }}>Войти</p>
+              </div>
+            )}
+
             <div className="menu menu-bars-fav" onClick={showFavorites}>
               <svg
                 className="heart icon-bars-fav"
