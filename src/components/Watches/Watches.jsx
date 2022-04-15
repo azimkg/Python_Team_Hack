@@ -207,10 +207,14 @@ const Watches = () => {
         </div>
         <Search />
         <div
-          style={{ cursor: "pointer", marginLeft: "4.5%" }}
+          className="container filter-block"
           onClick={() => setShowFilters(!showFilters)}
         >
-          {showFilters ? <h3>HIDE FILTERS</h3> : <h3>SHOW FILTERS</h3>}
+          {showFilters ? (
+            <h3 className="filter-title">Скрыть фильтр</h3>
+          ) : (
+            <h3 className="filter-title">Показать фильтр</h3>
+          )}
           {showFilters ? <Filters price={price} setPrice={setPrice} /> : null}
         </div>
         <AllWatch />

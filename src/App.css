@@ -199,6 +199,15 @@
 .btn-13:active {
   top: 2px;
 }
+.filter-title {
+  font-size: 32px;
+  font-weight: 600;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+.filter-block {
+  margin-top: 50px;
+  cursor: pointer;
+}
 @media (max-width: 780px) {
   .top-footer-main {
     display: flex;
@@ -223,6 +232,15 @@
     height: 380px;
     margin: 40px 20px;
     font-size: 12px;
+  }
+  .filter-title {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: "Alegreya Sans SC", sans-serif;
+  }
+  .filter-block {
+    margin-top: 30px;
+    cursor: pointer;
   }
   .card-div-img {
     margin: 0 auto;

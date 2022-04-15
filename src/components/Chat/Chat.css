@@ -1,16 +1,25 @@
+.chat {
+  background-color: #f7f7f7;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
 .container-kg {
   width: 100%;
   max-width: 60%;
-  border: 1px solid grey;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: 20px auto;
   height: 60vh;
   margin-bottom: 100px;
 }
 .container-kg-message {
   width: 100%;
-  height: 60vh;
-  border: 1px solid gray;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 2, 0.2);
   overflow-y: auto;
+  background-color: #fff;
+}
+.container-kg-message::-webkit-scrollbar {
+  width: 0px;
 }
 .container-spinner {
   width: 100%;
@@ -24,4 +33,109 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.avatar {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+.name {
+  margin-left: 10px;
+  align-items: center;
+}
+.avatar-name {
+  display: flex;
+  align-items: center;
+}
+.message-text {
+  margin-top: 15px;
+  margin-left: 40px;
+  background: #007aff;
+  border-radius: 6px;
+  padding: 8px;
+  color: white;
+  border-radius: 6px 0px 0px 6px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+}
+.fit-text {
+  width: fit-content;
+}
+.name {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: black;
+}
+.myDate {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #666668;
+  padding-top: 10px;
+}
+.textArea {
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #2a2a2b;
+  padding-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+.textArea::placeholder {
+  color: #2a2a2b;
+}
+.sendMessage {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 15px 55px;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #fff;
+  border: none;
+  background: #007aff;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 780px) {
+  .container-kg {
+    max-width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .container-kg {
+    max-width: 90%;
+  }
+  .sendMessage {
+    padding: 18px 30px;
+    font-size: 12px;
+  }
+  .textArea {
+    width: 100%;
+    font-weight: 400;
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: #2a2a2b;
+    padding-top: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .textArea::placeholder {
+    font-size: 12px;
+  }
+  .fit-text {
+    width: 100%;
+  }
+  .message-text {
+    margin-right: 30px;
+  }
+  .chat {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
