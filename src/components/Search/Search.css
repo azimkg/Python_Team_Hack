@@ -1,0 +1,21 @@
+.search-block {
+  display: flex;
+  margin: 0 auto;
+}
+.input-content {
+  width: 90%;
+}
+.input {
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid black;
+  transition: 1s;
+  width: 100%;
+}
+.search-class {
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+}
