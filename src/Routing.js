@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Admin from "./components/Admin/Admin";
 import AirKing from "./components/AirKing/AirKing";
+import AirKingPage from "./components/AirKingPage/AirKingPage";
 import Auth from "./components/Auth/Auth";
 import Chat from "./components/Chat/Chat";
 import DateJust from "./components/DateJust/DateJust";
@@ -48,6 +49,7 @@ const Routing = () => {
         <Route path="/watches" element={<Watches />} />
         <Route path="/details/:id" element={<Details />} />
         <Route path="/date-p" element={<DateJustPage />} />
+        <Route path="/airking-page" element={<AirKingPage />} />
         <Route path="/" element={<Header />} />
         <Route path="/ypage" element={<YachtPage />} />
         <Route path="/auth" element={<Auth />} />
