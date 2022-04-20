@@ -9,7 +9,7 @@ const Search = () => {
   const { getWatch } = useContext(rolexContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchValue, setSearchValue] = useState(
-    searchParams.get("q") ? searchParams.get("q") : ""
+    searchParams.get("search") ? searchParams.get("search") : ""
   );
 
   useEffect(() => {
@@ -18,11 +18,13 @@ const Search = () => {
 
   useEffect(() => {
     setSearchParams({
-      q: searchValue,
+      search: searchValue,
     });
   }, [searchValue]);
 
-  useEffect(() => getWatch(), [searchParams]);
+  useEffect(() => {
+    getWatch();
+  }, [searchParams]);
   return (
     <div className="search-block container">
       <svg

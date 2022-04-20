@@ -36,8 +36,8 @@ const EditedWatch = () => {
         wrapperCol={{ span: 14 }}
         layout="horizontal"
       >
-        <Form.Item label="Image 1">
-          <Input name="image1" value={edit.image1} onChange={handleValue} />
+        <Form.Item label="Image">
+          <Input name="image" value={edit.image} onChange={handleValue} />
         </Form.Item>
         <Form.Item label="Model">
           <Input name="model" value={edit.model} onChange={handleValue} />
@@ -51,8 +51,8 @@ const EditedWatch = () => {
         <Form.Item label="Description">
           <Input name="desc" value={edit.desc} onChange={handleValue} />
         </Form.Item>
-        <Form.Item label="Image 2">
-          <Input name="image2" value={edit.image2} onChange={handleValue} />
+        <Form.Item label="Type">
+          <Input name="image2" value={edit.type} onChange={handleValue} />
         </Form.Item>
       </Form>
       <Button

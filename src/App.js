@@ -4,16 +4,19 @@ import "antd/dist/antd.css";
 import RolexContextProvider from "./context/rolexContext";
 import "./App.css";
 import FanContextProvider from "./context/cartRolex";
+import LoginContextProvider from "./context/loginContext";
 import AuthContextProvider from "./context/authContext";
 
 const App = () => {
   return (
     <AuthContextProvider>
-      <RolexContextProvider>
-        <FanContextProvider>
-          <Routing />
-        </FanContextProvider>
-      </RolexContextProvider>
+      <LoginContextProvider>
+        <RolexContextProvider>
+          <FanContextProvider>
+            <Routing />
+          </FanContextProvider>
+        </RolexContextProvider>
+      </LoginContextProvider>
     </AuthContextProvider>
   );
 };

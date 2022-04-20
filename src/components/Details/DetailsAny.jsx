@@ -20,7 +20,7 @@ const DetailsAny = ({ item }) => {
             onClick={clickFan}
           />
           <Link to={`/details/${item.id}`}>
-            <img className="card-div-img" src={item.image1} alt="image" />
+            <img className="card-div-img" src={item.image} alt="image" />
           </Link>
           <h3>{item.model}</h3>
           <h4>{item.charac}</h4>

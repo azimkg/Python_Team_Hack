@@ -29,7 +29,7 @@ const CartRolex = () => {
                 <Link to={`/details/${item.item.id}`}>
                   <img
                     className="card-div-img"
-                    src={item.item.image1}
+                    src={item.item.image}
                     alt="image"
                   />
                 </Link>

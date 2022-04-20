@@ -12,8 +12,8 @@ const Watches = () => {
   const [showFilters, setShowFilters] = useState(false);
   useEffect(() => {
     setSearchParams({
-      price_gte: price[0],
-      price_lte: price[1],
+      price_from: price[0],
+      price_to: price[1],
     });
   }, [price]);
   return (
@@ -27,7 +27,6 @@ const Watches = () => {
           src="https://content.rolex.com/dam/watches/hubs/all-watches/videos/hub-collection-watches-cover.mp4"
         ></video>
         <div className="header-background"></div>
-
         <div className="watches-title">
           <h1 className="watches-h1">
             ОТКРОЙТЕ ДЛЯ СЕБЯ КОЛЛЕКЦИЮ ПРЕСТИЖНЫХ И ВЫСОКОТОЧНЫХ ЧАСОВ ROLEX.

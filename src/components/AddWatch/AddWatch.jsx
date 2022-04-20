@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
-import { Form, Input, Button, Modal, message } from "antd";
+import { Form, Input, Button, Modal, message, Upload } from "antd";
 import "./AddWatch.css";
 import { rolexContext } from "../../context/rolexContext";
+import { UploadOutlined } from "@ant-design/icons";
 const layout = {
   labelCol: {
     span: 8,
@@ -25,7 +26,7 @@ const validateMessages = {
 const AddWatch = () => {
   const { handleAddWatch } = useContext(rolexContext);
   const [model, setModel] = useState("");
-  const [image1, setImage1] = useState("");
+  const [image, setImage] = useState("");
   const [charac, setCharac] = useState("");
   const [titles, setTitles] = useState("");
   const [desc, setDesc] = useState("");
@@ -35,15 +36,31 @@ const AddWatch = () => {
   const onFinish = (values) => {
     console.log(values);
   };
-
+  // const props = {
+  //   // name: "file",
+  //   // action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
+  //   // headers: {
+  //   //   authorization: "authorization-text",
+  //   // },
+  //   onChange(info) {
+  //     if (info.file.status !== "uploading") {
+  //       console.log(info.file, info.fileList);
+  //     }
+  //     if (info.file.status === "done") {
+  //       message.success(`${info.file.name} file uploaded successfully`);
+  //     } else if (info.file.status === "error") {
+  //       message.error(`${info.file.name} file upload failed.`);
+  //     }
+  //   },
+  // };
   function addWatch() {
-    if (!image1 || !titles || !model || !desc || !charac) {
+    if (!titles || !model || !desc || !charac) {
       return setTimeout(() => {
         message.error("Заполните все поля!");
       }, 500);
     }
     let newWatch = {
-      image1,
+      image,
       model,
       charac,
       titles,
@@ -51,9 +68,10 @@ const AddWatch = () => {
       price,
       type,
     };
+    console.log(newWatch);
     handleAddWatch(newWatch);
     handleOk();
-    setImage1("");
+    setImage("");
     setModel("");
     setCharac("");
     setDesc("");
@@ -75,6 +93,7 @@ const AddWatch = () => {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
+  console.log(image);
   return (
     <div className="AddWatch">
       <Button type="primary" className="custom-btn btn-13" onClick={showModal}>
@@ -92,8 +111,22 @@ const AddWatch = () => {
           onFinish={onFinish}
           validateMessages={validateMessages}
         >
-          <Form.Item label="Image 1">
-            <Input value={image1} onChange={(e) => setImage1(e.target.value)} />
+          <Form.Item label="Image ">
+            {/* <Input value={image} onChange={(e) => setImage(e.target.value)} /> */}
+            {/* <Upload
+              onChange={(e) => console.log(e.file.originFileObj)}
+              value={image}
+            >
+              <Button icon={<UploadOutlined />}>Click to Upload</Button>
+            </Upload> */}
+            <input
+              onChange={(e) => setImage(e.target.files[0])}
+              // value={image}
+              type="file"
+              name=""
+              id=""
+            />
+            <img src={image ? image : ""} alt="" />
           </Form.Item>
           <Form.Item label="Model">
             <Input value={model} onChange={(e) => setModel(e.target.value)} />

@@ -29,6 +29,10 @@ const Auth = () => {
     }
   };
 
+  function handlesLogin() {
+    login(navigate);
+  }
+
   return (
     <Row className="row">
       <Col span={24}>
@@ -108,7 +112,7 @@ const Auth = () => {
           <div className="div-google">
             <Button
               type="primary"
-              onClick={login}
+              onClick={handlesLogin}
               style={{ cursor: "pointer" }}
             >
               Войти через GOOGLE

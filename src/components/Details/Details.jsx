@@ -1,13 +1,15 @@
-import { HeartOutlined } from "@ant-design/icons";
-import { Pagination, Spin } from "antd";
+import { HeartOutlined, SendOutlined } from "@ant-design/icons";
+import { Button, Input, message, Pagination, Spin } from "antd";
 import React, { useContext, useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import { rolexContext } from "../../context/rolexContext";
 import DetailsAny from "./DetailsAny";
 import "./Details.css";
+// import { authContext } from "../../context/authContext";
+import DetailsCommit from "./DetailsCommit";
 
 const Details = () => {
-  const { rolexEdit, editWatch, rolex, getWatch, countRolex } =
+  const { rolexEdit, editWatch, rolex, getWatch, countRolex, handleAddCommit } =
     useContext(rolexContext);
   const [edit, setEdit] = useState("");
   const params = useParams();
@@ -16,6 +18,10 @@ const Details = () => {
     searchParams.get("_page") ? searchParams.get("_page") : 1
   );
   const [limit, setLimit] = useState(3);
+  // const { currentUser } = useContext(authContext);
+  // const [userCommit, setUserCommit] = useState({ comment: "" });
+
+  const [show, setShow] = useState(false);
   useEffect(() => {
     editWatch(params.id);
   }, [params.id]);
@@ -35,6 +41,24 @@ const Details = () => {
     getWatch();
   }, [searchParams]);
 
+  // function addCommit(newCommit) {
+  //   let newCom = {
+  //     ...newCommit,
+  //     user: currentUser,
+  //     id: Date.now(),
+  //   };
+
+  //   let news = [...rolexEdit.comment, newCom];
+  //   currentUser
+  //     ? handleAddCommit(params.id, news)
+  //     : setTimeout(() =>
+  //         message.warning(
+  //           "Чтобы оставить комментарий нужно зарегистрироваться!"
+  //         )
+  //       );
+
+  //   setUserCommit("");
+  // }
   return edit ? (
     <div>
       <div className="details-container">
@@ -44,7 +68,7 @@ const Details = () => {
             <p className="details-title">{edit.charac}</p>
           </div>
           <div>
-            <img className="details-img" src={edit.image1} alt="image" />
+            <img className="details-img" src={edit.image} alt="image" />
           </div>
           <div className="details-price">
             <HeartOutlined className="details-heart" />
@@ -146,6 +170,43 @@ const Details = () => {
           </div>
         </div>
       </div>
+      <div className="watches-div-h3">
+        <h1
+          className="details-watches"
+          style={{ cursor: "pointer" }}
+          // onClick={() => setShow(!show)}
+        >
+          Комментарии
+        </h1>
+        {/* {show ? (
+          <div className="commit-div">
+            <Input.TextArea
+              placeholder="Добавить комментарий..."
+              value={userCommit.comment}
+              name="comment"
+              onChange={(e) =>
+                setUserCommit({
+                  ...userCommit,
+                  [e.target.name]: e.target.value,
+                })
+              }
+            />
+
+            <Button
+              style={{ margin: 10 }}
+              type="primary"
+              icon={<SendOutlined />}
+              onClick={() => addCommit(userCommit)}
+            >
+              Опубликовать
+            </Button>
+          </div>
+        ) : null} */}
+      </div>
+      <div className="watches-div-h4">
+        <DetailsCommit />
+      </div>
+
       <div className="watches-div-h3">
         <h3 className="details-watches">Похожие модели </h3>
       </div>
