@@ -24,13 +24,13 @@ import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 import SkyDweller from "./components/SkyDweller/SkyDweller";
 import SkyDwellerPage from "./components/SkyDwellerPage/SkyDwellerPage";
-import StarRating from "./components/StarRating/StarRating";
 import TopFooter from "./components/TopFooter/TopFooter";
 import Undefined from "./components/Undefined/Undefined";
 import Watches from "./components/Watches/Watches";
 import YachtPage from "./components/YachtPage/YachtPage";
 import YachtMaster from "./components/YactMaster/YachtMaster";
 import { useAuthContext } from "./context/loginContext";
+import ChatIcon from "./components/chat-icon/ChatIcon";
 
 export const publicRoutes = [
   {
@@ -65,8 +65,8 @@ const Routing = () => {
         <Route path="/ypage" element={<YachtPage />} />
         <Route path="/activate" element={<Activate />} />
         <Route path="/skydweller-page" element={<SkyDwellerPage />} />
-        {/* <Route path="/auth" element={<Auth />} /> */}
-        {/* <Route path="/chat" element={<Chat />} /> */}
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/chat" element={<Chat />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/forget" element={<Forget />} />
@@ -74,8 +74,8 @@ const Routing = () => {
         <Route path="/buy" element={<Buy />} />
         <Route path="/success" element={<Success />} />
         <Route path="/reset" element={<Reset />} />
-        <Route path="/form" element={<Form />} />
       </Routes>
+      <ChatIcon />
       <TopFooter />
       <Footer />
     </BrowserRouter>
