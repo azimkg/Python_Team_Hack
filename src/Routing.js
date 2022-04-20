@@ -74,6 +74,7 @@ const Routing = () => {
         <Route path="/buy" element={<Buy />} />
         <Route path="/success" element={<Success />} />
         <Route path="/reset" element={<Reset />} />
+          <Route path="/form" element={<Form />} />
       </Routes>
       <ChatIcon />
       <TopFooter />
