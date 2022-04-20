@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import firebase from "firebase/compat/app";
-
 import { firestore, auth } from "../Fire";
 import fire from "../Fire";
 
@@ -19,10 +18,11 @@ const AuthContextProvider = ({ children }) => {
       .catch((err) => setError(err.message));
   }
 
-  const login = async () => {
+  const login = async (navigate) => {
     const provider = new firebase.auth.GoogleAuthProvider();
     const { user } = await auth.signInWithPopup(provider);
     setCurrentUser(user);
+    navigate("/");
   };
 
   function handleSignUp(email, password, navigate) {

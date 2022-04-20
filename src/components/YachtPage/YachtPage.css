@@ -107,3 +107,141 @@
   font-family: "Alegreya Sans SC", sans-serif;
   text-align: center;
 }
+@media (max-width: 1400px) {
+  .image-ypage {
+    width: 380px;
+  }
+}
+@media (max-width: 1350px) {
+  .yacht-pages-text {
+    max-width: 70%;
+    font-size: 30px;
+    padding-top: 40px;
+  }
+  .image-ypage {
+    width: 350px;
+  }
+  .yacht-pages-title {
+    margin-top: 70px;
+    max-width: 60%;
+  }
+  .yacht-pages-titles {
+    max-width: 60%;
+  }
+  .container_ypage {
+    max-width: 90%;
+  }
+}
+@media (max-width: 1150px) {
+  .container_ypage {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) {
+  .ypage-texts {
+    font-size: 16px;
+  }
+  .ypage-text {
+    font-size: 16px;
+  }
+  .yacht-pages-title {
+    margin-top: 50px;
+    max-width: 65%;
+  }
+  .yacht-pages-titles {
+    max-width: 65%;
+  }
+}
+@media (max-width: 768px) {
+  .ypage1 {
+    width: 100%;
+  }
+  .ypages {
+    flex-wrap: wrap;
+  }
+  .ypage2 {
+    width: 100%;
+  }
+  .yacht-pages-title {
+    margin-top: 40px;
+    max-width: 70%;
+    font-size: 22px;
+  }
+  .yacht-pages-titles {
+    max-width: 70%;
+    font-size: 20px;
+  }
+  .yacht-pages-text {
+    max-width: 70%;
+    font-size: 26px;
+    padding-top: 30px;
+  }
+  .yacht-pages-text1 {
+    max-width: 70%;
+
+    font-size: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .yacht-pages-title {
+    margin-top: 40px;
+    max-width: 70%;
+    font-size: 20px;
+  }
+  .yacht-pages-titles {
+    max-width: 70%;
+    font-size: 18px;
+  }
+  .image-ypage {
+    width: 250px;
+    margin: 10px auto;
+  }
+}
+@media (max-width: 550px) {
+  .yacht-pages-text {
+    max-width: 80%;
+    font-size: 24px;
+    padding-top: 20px;
+  }
+  .yacht-pages-title {
+    margin-top: 40px;
+    max-width: 80%;
+    font-size: 18px;
+  }
+  .yacht-pages-titles {
+    max-width: 80%;
+    font-size: 16px;
+  }
+  .yacht-pages-text1 {
+    max-width: 80%;
+
+    font-size: 14px;
+  }
+  .ypage-texts {
+    font-size: 16px;
+  }
+  .ypage-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .yacht-pages-text {
+    max-width: 90%;
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  .yacht-pages-text1 {
+    max-width: 90%;
+    font-size: 10px;
+  }
+  .yacht-pages-title {
+    margin-top: 40px;
+    max-width: 80%;
+    font-size: 16px;
+  }
+  .yacht-pages-titles {
+    max-width: 80%;
+    font-size: 14px;
+  }
+}

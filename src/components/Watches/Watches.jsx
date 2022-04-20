@@ -7,15 +7,15 @@ import Filters from "../Filter/Filter";
 import { useSearchParams } from "react-router-dom";
 
 const Watches = () => {
-  const [price, setPrice] = useState([1, 6000]);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [showFilters, setShowFilters] = useState(false);
-  useEffect(() => {
-    setSearchParams({
-      price_gte: price[0],
-      price_lte: price[1],
-    });
-  }, [price]);
+  // const [price, setPrice] = useState([1, 6000]);
+  // const [searchParams, setSearchParams] = useSearchParams();
+  // const [showFilters, setShowFilters] = useState(false);
+  // useEffect(() => {
+  //   setSearchParams({
+  //     price_from: price[0],
+  //     price_to: price[1],
+  //   });
+  // }, [price]);
   return (
     <div className="watch-container">
       <div className="header">
@@ -206,13 +206,13 @@ const Watches = () => {
           </p>
         </div>
         <Search />
-        <div
+        {/* <div
           style={{ cursor: "pointer", marginLeft: "4.5%" }}
           onClick={() => setShowFilters(!showFilters)}
         >
           {showFilters ? <h3>HIDE FILTERS</h3> : <h3>SHOW FILTERS</h3>}
           {showFilters ? <Filters price={price} setPrice={setPrice} /> : null}
-        </div>
+        </div> */}
         <AllWatch />
       </div>
     </div>

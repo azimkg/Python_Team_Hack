@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import icon from "../assets/icon.svg";
 import fabars from "../assets/fabars.png";
@@ -13,17 +13,32 @@ import yacht from "../assets/yacht.webp";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import { Autoplay, Scrollbar } from "swiper";
 import CartRolex from "../CartRolex/CartRolex";
-import { LoginOutlined, LogoutOutlined } from "@ant-design/icons";
-import { authContext } from "../../context/authContext";
+import {
+  LoginOutlined,
+  LogoutOutlined,
+  UserAddOutlined,
+} from "@ant-design/icons";
+import { useAuthContext } from "../../context/loginContext";
+import { Button } from "antd";
+// import { authContext } from "../../context/authContext";
 
 function Navbar() {
-  const { currentUser, handleLogout } = useContext(authContext);
+  // const { currentUser, handleLogout } = useContext(authContext);
   const [sidebar, setSidebar] = useState(false);
   const [favorites, setFavorites] = useState(false);
   const navigate = useNavigate();
 
+  const { user, checkAuth, logout, loading } = useAuthContext();
+  const location = useLocation();
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      checkAuth();
+    }
+  }, []);
+
   const showSidebar = () => setSidebar(!sidebar);
   const showFavorites = () => setFavorites(!favorites);
+  // console.log(user);
 
   return (
     <>
@@ -40,7 +55,7 @@ function Navbar() {
             className="icon-img"
           />
           <div className="menu-right">
-            {currentUser ? (
+            {/* {currentUser ? (
               <div className="menu">
                 <LogoutOutlined
                   className="user-outlined"
@@ -56,7 +71,27 @@ function Navbar() {
                 />
                 <p style={{ cursor: "pointer" }}>Войти</p>
               </div>
-            )}
+            // )} */}
+            {user ? (
+              <div className="menu">
+                <Button
+                  onClick={logout}
+                  className="user-outlined"
+                  icon={<LogoutOutlined />}
+                >
+                  Выйти
+                </Button>
+              </div>
+            ) : location.path !== "/signup" ? (
+              <Button
+                className="user-outlined"
+                style={{ zIndex: "2" }}
+                icon={<UserAddOutlined />}
+                onClick={() => navigate("/signup")}
+              >
+                Register
+              </Button>
+            ) : null}
 
             <div className="menu menu-bars-fav" onClick={showFavorites}>
               <svg
@@ -157,8 +192,8 @@ function Navbar() {
               <Link to="/watches">
                 <p className="menu-links-item">Поиск Часов</p>
               </Link>
-              <Link to="/watches">
-                <p className="menu-links-item">Мир Rolex</p>
+              <Link to="/admin">
+                <p className="menu-links-item">Админ</p>
               </Link>
             </div>
           </ul>

@@ -87,6 +87,10 @@
   font-size: 26px;
   font-weight: bold;
   cursor: pointer;
+  margin: auto 0;
+  z-index: 2;
+  border: none !important;
+  font-size: 18px !important;
 }
 .nav-menu-fav {
   z-index: 8888;

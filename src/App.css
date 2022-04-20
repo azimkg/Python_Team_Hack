@@ -27,7 +27,7 @@
 .card-div {
   text-align: center;
   width: 350px;
-  height: 410px;
+  height: 440px;
   margin: 0px 20px 30px;
   background-color: white;
   display: inline-block;
@@ -37,12 +37,22 @@
 .card-div1 {
   text-align: center;
   width: 350px;
-  height: 460px;
+  height: 480px;
   margin: 0px 20px 30px;
   background-color: white;
   display: inline-block;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.pishka {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80%;
+  color: black;
+}
+.back {
+  font-size: 16px;
+  color: black !important;
 }
 .card-div-img {
   margin: 0 auto;

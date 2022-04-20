@@ -7,26 +7,26 @@ import { Pagination } from "antd";
 
 const AllWatch = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { rolex, getWatch, countRolex } = useContext(rolexContext);
+  const { rolex, getWatch, countRolex, next, previous } =
+    useContext(rolexContext);
   const [page, setPage] = useState(
-    searchParams.get("_page") ? searchParams.get("_page") : 1
+    searchParams.get("offset") ? searchParams.get("offset") : 1
   );
-  const [limit, setLimit] = useState(9);
   useEffect(() => {
     getWatch();
   }, []);
 
   useEffect(() => {
     setSearchParams({
-      _page: page,
-      _limit: limit,
+      page: page,
     });
-  }, [page, limit]);
+  }, [page]);
 
   useEffect(() => {
     getWatch();
   }, [searchParams]);
 
+  console.log(rolex);
   return (
     <>
       <div className="container-cards">
@@ -36,13 +36,12 @@ const AllWatch = () => {
       </div>
       <div className="details-pagination">
         <Pagination
-          total={+countRolex}
+          // total={}
           current={+page}
-          pageSize={+limit}
+          // pageSize={}
           defaultCurrent={1}
-          onChange={(page, limit) => {
+          onChange={(page) => {
             setPage(page);
-            setLimit(limit);
           }}
         />
       </div>

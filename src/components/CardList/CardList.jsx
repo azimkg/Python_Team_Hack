@@ -8,7 +8,7 @@ const CardList = ({ item }) => {
   return (
     <div className="cardest">
       <div className="card-div">
-        <img className="card-div-img" src={item.image1} alt="image" />
+        <img className="card-div-img" src={item.image} alt="image" />
         <h3>{item.model}</h3>
         <h4>{item.charac}</h4>
         <div
