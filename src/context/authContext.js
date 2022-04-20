@@ -14,7 +14,7 @@ const AuthContextProvider = ({ children }) => {
     fire
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then(() => navigate("/"))
+      .then(() => navigate("/chat"))
       .catch((err) => setError(err.message));
   }
 
@@ -22,7 +22,7 @@ const AuthContextProvider = ({ children }) => {
     const provider = new firebase.auth.GoogleAuthProvider();
     const { user } = await auth.signInWithPopup(provider);
     setCurrentUser(user);
-    navigate("/");
+    navigate("/chat");
   };
 
   function handleSignUp(email, password, navigate) {

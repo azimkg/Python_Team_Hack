@@ -78,9 +78,7 @@ function Navbar() {
                   onClick={logout}
                   className="user-outlined"
                   icon={<LogoutOutlined />}
-                >
-                  Выйти
-                </Button>
+                ></Button>
               </div>
             ) : location.path !== "/signup" ? (
               <Button
@@ -88,9 +86,7 @@ function Navbar() {
                 style={{ zIndex: "2" }}
                 icon={<UserAddOutlined />}
                 onClick={() => navigate("/signup")}
-              >
-                Register
-              </Button>
+              ></Button>
             ) : null}
 
             <div className="menu menu-bars-fav" onClick={showFavorites}>
