@@ -64,19 +64,22 @@ const LoginContextProvider = ({ children }) => {
   }
 
   async function forgetAccount(email, navigate) {
-    let formData = new FormData();
-    formData.append("email", email);
+    let res = await axios.post(`${API}api/password_reset/`, { email });
+    console.log("from reset", res);
 
-    try {
-      let res = await axios.post(
-        `http://3.72.15.140/v1/account/forgot_pass/`,
-        formData
-      );
-      console.log(res);
-      navigate("/signin");
-    } catch (e) {
-      setError("Error!");
-    }
+    // let formData = new FormData();
+    // formData.append("email", email);
+
+    // try {
+    //   let res = await axios.post(
+    //     `http://3.72.15.140/v1/api/password_reset/`,
+    //     formData
+    //   );
+    //   console.log(res);
+    navigate("/signin");
+    // } catch (e) {
+    //   setError("Error!");
+    // }
   }
 
   async function checkAuth() {
@@ -107,6 +110,17 @@ const LoginContextProvider = ({ children }) => {
     localStorage.removeItem("username");
     setUser("");
   }
+  async function resetPassword(email) {
+    let res = await axios.post(`${API}api/password_reset/`, { email });
+    console.log("from reset", res);
+  }
+  async function confirmResetPassword(password, token) {
+    let res = await axios.post(`${API}api/password_reset/confirm/`, {
+      password,
+      token,
+    });
+    console.log("from confirm reset", res);
+  }
   return (
     <authContext.Provider
       value={{
@@ -119,6 +133,8 @@ const LoginContextProvider = ({ children }) => {
         loading,
         activateLog,
         forgetAccount,
+        confirmResetPassword,
+        resetPassword,
       }}
     >
       {children}

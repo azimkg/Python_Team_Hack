@@ -7,15 +7,15 @@ import Filters from "../Filter/Filter";
 import { useSearchParams } from "react-router-dom";
 
 const Watches = () => {
-  // const [price, setPrice] = useState([1, 6000]);
-  // const [searchParams, setSearchParams] = useSearchParams();
-  // const [showFilters, setShowFilters] = useState(false);
-  // useEffect(() => {
-  //   setSearchParams({
-  //     price_from: price[0],
-  //     price_to: price[1],
-  //   });
-  // }, [price]);
+  const [price, setPrice] = useState([1, 6000]);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [showFilters, setShowFilters] = useState(false);
+  useEffect(() => {
+    setSearchParams({
+      price_from: price[0],
+      price_to: price[1],
+    });
+  }, [price]);
   return (
     <div className="watch-container">
       <div className="header">
@@ -27,7 +27,6 @@ const Watches = () => {
           src="https://content.rolex.com/dam/watches/hubs/all-watches/videos/hub-collection-watches-cover.mp4"
         ></video>
         <div className="header-background"></div>
-
         <div className="watches-title">
           <h1 className="watches-h1">
             ОТКРОЙТЕ ДЛЯ СЕБЯ КОЛЛЕКЦИЮ ПРЕСТИЖНЫХ И ВЫСОКОТОЧНЫХ ЧАСОВ ROLEX.
@@ -206,13 +205,17 @@ const Watches = () => {
           </p>
         </div>
         <Search />
-        {/* <div
-          style={{ cursor: "pointer", marginLeft: "4.5%" }}
+        <div
+          className="container filter-block"
           onClick={() => setShowFilters(!showFilters)}
         >
-          {showFilters ? <h3>HIDE FILTERS</h3> : <h3>SHOW FILTERS</h3>}
+          {showFilters ? (
+            <h3 className="filter-title">Скрыть фильтр</h3>
+          ) : (
+            <h3 className="filter-title">Показать фильтр</h3>
+          )}
           {showFilters ? <Filters price={price} setPrice={setPrice} /> : null}
-        </div> */}
+        </div>
         <AllWatch />
       </div>
     </div>

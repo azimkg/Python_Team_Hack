@@ -41,7 +41,7 @@ const SignIn = () => {
         placeholder="Password"
       />
       <Button onClick={() => handleRegister(email, password)}>Sign In</Button>
-      <Link to="/forget">
+      <Link to="/reset">
         <p>Забыли пароль</p>
       </Link>
       <p>

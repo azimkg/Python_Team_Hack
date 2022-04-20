@@ -9,7 +9,13 @@ import { LoadingOutlined } from "@ant-design/icons";
 import { Input } from "antd";
 
 const { TextArea } = Input;
+let moment = require("moment");
+let myDate;
+myDate = moment().format("MMMM Do YYYY, h:mm:ss a");
 
+// let newObj = {
+//   date: new Date(),
+// };
 const Chat = () => {
   const { auth, firestore, currentUser } = useContext(authContext);
   const [user] = useAuthState(auth);
@@ -28,6 +34,7 @@ const Chat = () => {
       photoURL: user.photoURL,
       text: value,
       createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+      date: new Date(),
     });
     setValue("");
   };
@@ -41,42 +48,41 @@ const Chat = () => {
       </div>
     );
   }
+
   return (
-    <div>
+    <div className="chat">
       <div className="container-kg">
         <div className="container-kg-message">
+          <h1 className="myDate">{myDate}</h1>
           {messages.map((message) => (
             <div
+              className="fit-text"
               style={{
                 margin: 10,
-                border:
-                  user.uid === message.uid
-                    ? "2px solid green"
-                    : "2px dashed red",
                 marginLeft: user.uid === message.uid ? "auto" : "10px",
-                width: "fit-content",
                 padding: 5,
               }}
             >
-              <div>
-                <Avatar src={message.photoURL} />
-                <div>{message.displayName}</div>
+              <div className="avatar-name">
+                <Avatar className="avatar" src={message.photoURL} />
+                <div className="name">{message.displayName}</div>
               </div>
-              <div>{message.text}</div>
+              <div className="message-text">{message.text}</div>
             </div>
           ))}
         </div>
         <div className="container-chat">
           <TextArea
+            className="textArea"
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            placeholder="Controlled autosize"
+            placeholder="Введите что нибудь"
             autoSize={{ minRows: 2, maxRows: 2 }}
             style={{ width: "80%" }}
           />
-          <Button type="primary" onClick={sendMessage}>
+          <button className="sendMessage" onClick={sendMessage}>
             Отправить
-          </Button>
+          </button>
         </div>
       </div>
     </div>

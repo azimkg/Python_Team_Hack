@@ -149,7 +149,7 @@ function Navbar() {
               >
                 <SwiperSlide>
                   <div className="slide-block">
-                    <Link to="/airking">
+                    <Link to="/airking-page">
                       <img className="slide-img" src={airKing} alt="" />
                       <p className="slide-block-text">AIR-KING</p>
                     </Link>

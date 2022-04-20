@@ -9,8 +9,7 @@ const INIT_STATE = {
   rolex: [],
   editRolex: null,
   countRolex: 0,
-  next: null,
-  prev: null,
+  pages: 0,
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -19,8 +18,7 @@ const reducer = (state = INIT_STATE, action) => {
       return {
         ...state,
         rolex: action.payload.results,
-        next: action.payload.next,
-        prev: action.payload.previous,
+        pages: action.payload.count / 5,
         // next
         // countRolex: action.payload.headers["x-total-count"],
       };
@@ -130,8 +128,7 @@ const RolexContextProvider = ({ children }) => {
         countRolex: state.countRolex,
         rolex: state.rolex,
         rolexEdit: state.rolexEdit,
-        next: state.next,
-        previous: state.previous,
+        pages: state.pages,
         getWatch,
         handleAddWatch,
         handleWatchDelete,

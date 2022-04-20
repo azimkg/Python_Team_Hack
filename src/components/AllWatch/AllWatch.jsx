@@ -3,22 +3,19 @@ import { rolexContext } from "../../context/rolexContext";
 import AllWatchCard from "./AllWatchCard";
 import "./AllWatch.css";
 import { useSearchParams } from "react-router-dom";
-import { Pagination } from "antd";
+import { Button, Pagination } from "antd";
 
 const AllWatch = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { rolex, getWatch, countRolex, next, previous } =
-    useContext(rolexContext);
-  const [page, setPage] = useState(
-    searchParams.get("offset") ? searchParams.get("offset") : 1
-  );
+  const { rolex, getWatch, countRolex, pages } = useContext(rolexContext);
+  const [page, setPage] = useState(1);
   useEffect(() => {
     getWatch();
   }, []);
 
   useEffect(() => {
     setSearchParams({
-      page: page,
+      page,
     });
   }, [page]);
 
@@ -35,15 +32,23 @@ const AllWatch = () => {
         ))}
       </div>
       <div className="details-pagination">
-        <Pagination
-          // total={}
-          current={+page}
-          // pageSize={}
-          defaultCurrent={1}
-          onChange={(page) => {
-            setPage(page);
-          }}
-        />
+        <div>
+          <Button
+            className="prev"
+            disabled={page === 1 ? true : false}
+            onClick={() => setPage(page - 1)}
+          >
+            prev
+          </Button>
+          <span style={{ color: "white" }}>{page}</span>
+          <Button
+            disabled={page === pages ? true : false}
+            className="next"
+            onClick={() => setPage(pages)}
+          >
+            next
+          </Button>
+        </div>
       </div>
     </>
   );
