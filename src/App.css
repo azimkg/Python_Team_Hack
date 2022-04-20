@@ -273,6 +273,12 @@ body {
     margin: 40px 20px;
     font-size: 12px;
   }
+  .card-div1 {
+    width: 280px;
+    height: 400px;
+    margin: 40px 20px;
+    font-size: 12px;
+  }
   .filter-title {
     font-size: 22px;
     font-weight: 600;
