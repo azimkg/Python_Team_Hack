@@ -44,7 +44,7 @@ const AllWatch = () => {
           <Button
             disabled={page === pages ? true : false}
             className="next"
-            onClick={() => setPage(pages)}
+            onClick={() => setPage(page+1)}
           >
             Следующая
           </Button>
