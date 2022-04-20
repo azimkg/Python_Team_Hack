@@ -123,7 +123,7 @@ function Navbar() {
 
                 <SwiperSlide>
                   <div className="slide-block">
-                    <Link to="/sky">
+                    <Link to="/skydweller-page">
                       <img className="slide-img" src={sky} alt="" />
                       <p className="slide-block-text">Sky-Dweller</p>
                     </Link>

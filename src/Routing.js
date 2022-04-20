@@ -14,6 +14,7 @@ import Header from "./components/Header/Header";
 import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
 import SkyDweller from "./components/SkyDweller/SkyDweller";
+import SkyDwellerPage from "./components/SkyDwellerPage/SkyDwellerPage";
 import StarRating from "./components/StarRating/StarRating";
 import TopFooter from "./components/TopFooter/TopFooter";
 import Watches from "./components/Watches/Watches";
@@ -50,6 +51,7 @@ const Routing = () => {
         <Route path="/details/:id" element={<Details />} />
         <Route path="/date-p" element={<DateJustPage />} />
         <Route path="/airking-page" element={<AirKingPage />} />
+        <Route path="/skydweller-page" element={<SkyDwellerPage />} />
         <Route path="/" element={<Header />} />
         <Route path="/ypage" element={<YachtPage />} />
         <Route path="/auth" element={<Auth />} />
