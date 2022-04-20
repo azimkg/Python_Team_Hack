@@ -22,6 +22,7 @@ import ResetPassword from "./components/ResetPassword/ResetPassword";
 import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 import SkyDweller from "./components/SkyDweller/SkyDweller";
+import SkyDwellerPage from "./components/SkyDwellerPage/SkyDwellerPage";
 import StarRating from "./components/StarRating/StarRating";
 import TopFooter from "./components/TopFooter/TopFooter";
 import Undefined from "./components/Undefined/Undefined";
@@ -84,6 +85,7 @@ const Routing = () => {
             <Route path="/" element={<Header />} />
             <Route path="/ypage" element={<YachtPage />} />
             <Route path="/activate" element={<Activate />} />
+            <Route path="/skydweller-page" element={<SkyDwellerPage />} />
             {/* <Route path="/auth" element={<Auth />} /> */}
             {/* <Route path="/chat" element={<Chat />} /> */}
             <Route path="/signin" element={<SignIn />} />
