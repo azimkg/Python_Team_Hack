@@ -187,9 +187,9 @@ function Navbar() {
               <Link to="/watches">
                 <p className="menu-links-item">Поиск Часов</p>
               </Link>
-              <Link to="/admin">
+               {user === "meerim@gmail.com"? <Link to="/admin">
                 <p className="menu-links-item">Админ</p>
-              </Link>
+              </Link>:null}
             </div>
           </ul>
         </nav>
