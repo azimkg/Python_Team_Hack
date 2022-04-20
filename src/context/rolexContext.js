@@ -115,12 +115,7 @@ const RolexContextProvider = ({ children }) => {
 
   // async function handleAddCommit(id, comments) {
   //   await axios.patch(`${ROLEX_API}${id}`, { comments: comments });
-  //   editWatch(id);
   // }
-
-  async function addLikes() {
-    await axios.patch(`${ROLEX_API}`);
-  }
 
   return (
     <rolexContext.Provider

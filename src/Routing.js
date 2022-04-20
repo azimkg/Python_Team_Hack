@@ -14,6 +14,7 @@ import Details from "./components/Details/Details";
 import EditedWatch from "./components/EditedWatch/EditedWatch";
 import Footer from "./components/Footer/Footer";
 import Forget from "./components/Forget/Forget";
+import Form from "./components/Form/Form";
 import Header from "./components/Header/Header";
 import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
@@ -48,58 +49,35 @@ const Routing = () => {
   const { user } = useAuthContext();
   return (
     <BrowserRouter>
-      {!user ? (
-        <>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Header />} />
-            <Route path="/activate" element={<Activate />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route
-              path="/api/v1/account/activate/:code"
-              element={<Activate />}
-            />
-            <Route path="/reset" element={<Reset />} />
-            <Route
-              path="/api/v1/account/password_reset"
-              element={<ResetPassword />}
-            />
-            <Route path="/forget" element={<Forget />} />
-          </Routes>
-        </>
-      ) : (
-        <>
-          <Navbar />
-          <Routes>
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/yacht" element={<YachtMaster />} />
-            <Route path="/sky" element={<SkyDweller />} />
-            <Route path="/airking" element={<AirKing />} />
-            <Route path="/datejust" element={<DateJust />} />
-            <Route path="/edit/:id" element={<EditedWatch />} />
-            <Route path="/watches" element={<Watches />} />
-            <Route path="/details/:id" element={<Details />} />
-            <Route path="/date-p" element={<DateJustPage />} />
-            <Route path="/airking-page" element={<AirKingPage />} />
-            <Route path="/" element={<Header />} />
-            <Route path="/ypage" element={<YachtPage />} />
-            <Route path="/activate" element={<Activate />} />
-            <Route path="/skydweller-page" element={<SkyDwellerPage />} />
-            {/* <Route path="/auth" element={<Auth />} /> */}
-            {/* <Route path="/chat" element={<Chat />} /> */}
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/forget" element={<Forget />} />
-            <Route path="*" element={<Undefined />} />
-            <Route path="/buy" element={<Buy />} />
-            <Route path="/success" element={<Success />} />
-            <Route path="/reset" element={<Reset />} />
-          </Routes>
-          <TopFooter />
-          <Footer />
-        </>
-      )}
+      <Navbar />
+      <Routes>
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/yacht" element={<YachtMaster />} />
+        <Route path="/sky" element={<SkyDweller />} />
+        <Route path="/airking" element={<AirKing />} />
+        <Route path="/datejust" element={<DateJust />} />
+        <Route path="/edit/:id" element={<EditedWatch />} />
+        <Route path="/watches" element={<Watches />} />
+        <Route path="/details/:id" element={<Details />} />
+        <Route path="/date-p" element={<DateJustPage />} />
+        <Route path="/airking-page" element={<AirKingPage />} />
+        <Route path="/" element={<Header />} />
+        <Route path="/ypage" element={<YachtPage />} />
+        <Route path="/activate" element={<Activate />} />
+        <Route path="/skydweller-page" element={<SkyDwellerPage />} />
+        {/* <Route path="/auth" element={<Auth />} /> */}
+        {/* <Route path="/chat" element={<Chat />} /> */}
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/forget" element={<Forget />} />
+        <Route path="*" element={<Undefined />} />
+        <Route path="/buy" element={<Buy />} />
+        <Route path="/success" element={<Success />} />
+        <Route path="/reset" element={<Reset />} />
+        <Route path="/form" element={<Form />} />
+      </Routes>
+      <TopFooter />
+      <Footer />
     </BrowserRouter>
   );
 };

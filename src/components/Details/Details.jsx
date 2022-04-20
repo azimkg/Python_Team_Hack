@@ -1,7 +1,11 @@
-import { HeartOutlined, SendOutlined } from "@ant-design/icons";
+import {
+  HeartOutlined,
+  SendOutlined,
+  ShoppingOutlined,
+} from "@ant-design/icons";
 import { Button, Input, message, Pagination, Spin } from "antd";
 import React, { useContext, useEffect, useState } from "react";
-import { useParams, useSearchParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { rolexContext } from "../../context/rolexContext";
 import DetailsAny from "./DetailsAny";
 import "./Details.css";
@@ -72,6 +76,9 @@ const Details = () => {
           </div>
           <div className="details-price">
             <HeartOutlined className="details-heart" />
+            <Link to="/form">
+              <ShoppingOutlined className="details-heart" />
+            </Link>
           </div>
         </div>
       </div>

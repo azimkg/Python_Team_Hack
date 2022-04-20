@@ -17,6 +17,7 @@
 }
 .details-heart {
   color: white !important;
+  cursor: pointer;
 
   font-size: 30px;
   max-width: 30px;
