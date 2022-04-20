@@ -14,7 +14,7 @@ const Success = () => {
           <Button
             type="primary"
             key="console"
-            onClick={() => navigate("/cart")}
+            onClick={() => navigate("/")}
           >
             В корзину
           </Button>
