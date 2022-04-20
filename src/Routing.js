@@ -14,6 +14,7 @@ import Details from "./components/Details/Details";
 import EditedWatch from "./components/EditedWatch/EditedWatch";
 import Footer from "./components/Footer/Footer";
 import Forget from "./components/Forget/Forget";
+import Form from "./components/Form/Form";
 import Header from "./components/Header/Header";
 import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";

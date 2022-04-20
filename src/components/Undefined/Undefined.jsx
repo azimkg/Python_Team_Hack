@@ -7,7 +7,7 @@ const Undefined = () => {
   return (
     <div className="undefined">
       <div className="null">
-        <h1>Вы ввели неправильный адрес!</h1>
+        <h1 className="undefineded">ERROR 404</h1>
         <Link to="/">
           <Button type="primary">На главную</Button>
         </Link>

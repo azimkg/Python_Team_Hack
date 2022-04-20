@@ -77,14 +77,14 @@ function Navbar() {
                 <Button
                   onClick={logout}
                   className="user-outlined"
-                  icon={<LogoutOutlined />}
+                  icon={<LogoutOutlined className="user-outlined" />}
                 ></Button>
               </div>
             ) : location.path !== "/signup" ? (
               <Button
                 className="user-outlined"
                 style={{ zIndex: "2" }}
-                icon={<UserAddOutlined />}
+                icon={<UserAddOutlined className="user-outlined" />}
                 onClick={() => navigate("/signup")}
               ></Button>
             ) : null}
@@ -151,7 +151,6 @@ function Navbar() {
                     </Link>
                   </div>
                 </SwiperSlide>
-
                 <SwiperSlide>
                   <div className="slide-block">
                     <Link to="/skydweller-page">

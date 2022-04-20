@@ -1,7 +1,11 @@
-import { HeartOutlined, SendOutlined } from "@ant-design/icons";
+import {
+  HeartOutlined,
+  SendOutlined,
+  ShoppingOutlined,
+} from "@ant-design/icons";
 import { Button, Input, message, Pagination, Spin } from "antd";
 import React, { useContext, useEffect, useState } from "react";
-import { useParams, useSearchParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { rolexContext } from "../../context/rolexContext";
 import DetailsAny from "./DetailsAny";
 import "./Details.css";
@@ -9,15 +13,12 @@ import "./Details.css";
 import DetailsCommit from "./DetailsCommit";
 
 const Details = () => {
-  const { rolexEdit, editWatch, rolex, getWatch, countRolex, handleAddCommit } =
+  const { rolexEdit, editWatch, rolex, getWatch, pages } =
     useContext(rolexContext);
   const [edit, setEdit] = useState("");
   const params = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
-  const [page, setPage] = useState(
-    searchParams.get("_page") ? searchParams.get("_page") : 1
-  );
-  const [limit, setLimit] = useState(3);
+  const [page, setPage] = useState(1);
   // const { currentUser } = useContext(authContext);
   // const [userCommit, setUserCommit] = useState({ comment: "" });
 
@@ -30,12 +31,9 @@ const Details = () => {
     setEdit(rolexEdit);
     setSearchParams({
       type: rolexEdit?.type,
-      _start: 1,
-      _end: 7,
-      _page: page,
-      _limit: limit,
+      page,
     });
-  }, [rolexEdit, page, limit]);
+  }, [rolexEdit, page]);
 
   useEffect(() => {
     getWatch();
@@ -72,6 +70,9 @@ const Details = () => {
           </div>
           <div className="details-price">
             <HeartOutlined className="details-heart" />
+            <Link to="/form">
+              <ShoppingOutlined className="details-heart" />
+            </Link>
           </div>
         </div>
       </div>
@@ -214,18 +215,6 @@ const Details = () => {
         {rolex.map((item) => (
           <DetailsAny key={item.id} item={item} />
         ))}
-      </div>
-      <div className="details-pagination">
-        <Pagination
-          total={+countRolex}
-          current={+page}
-          pageSize={+limit}
-          defaultCurrent={1}
-          onChange={(page, limit) => {
-            setPage(page);
-            setLimit(limit);
-          }}
-        />
       </div>
     </div>
   ) : (

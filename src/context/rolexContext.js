@@ -113,13 +113,18 @@ const RolexContextProvider = ({ children }) => {
     getWatch();
   }
 
-  // async function handleAddCommit(id, comments) {
-  //   await axios.patch(`${ROLEX_API}${id}`, { comments: comments });
-  //   editWatch(id);
-  // }
-
-  async function addLikes() {
-    await axios.patch(`${ROLEX_API}`);
+  async function handleAddCommit(id, comments) {
+    let formData = new FormData();
+    formData.append("product", id);
+    formData.append("name", comments.name);
+    formData.append("text", comments.text);
+    const Authorization = `Bearer ${
+      JSON.parse(localStorage.getItem("token")).access
+    }`;
+    await axios.post(`${ROLEX_API}details/${id}/comment/`, formData, {
+      headers: { "Content-Type": "multipart/form-data" },
+      Authorization,
+    });
   }
 
   return (
@@ -134,6 +139,7 @@ const RolexContextProvider = ({ children }) => {
         handleWatchDelete,
         editWatch,
         handleEditWatch,
+        handleAddCommit,
       }}
     >
       {children}

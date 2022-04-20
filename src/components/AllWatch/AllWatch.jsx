@@ -38,15 +38,15 @@ const AllWatch = () => {
             disabled={page === 1 ? true : false}
             onClick={() => setPage(page - 1)}
           >
-            prev
+            Предыдущая
           </Button>
-          <span style={{ color: "white" }}>{page}</span>
+          <span></span>
           <Button
             disabled={page === pages ? true : false}
             className="next"
             onClick={() => setPage(pages)}
           >
-            next
+            Следующая
           </Button>
         </div>
       </div>

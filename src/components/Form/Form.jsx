@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Input, InputNumber, Button, message } from "antd";
-import "./Forms.css";
 import { useNavigate } from "react-router-dom";
+import "./Form.css";
 
 const Forms = () => {
   const navigate = useNavigate();

@@ -1,21 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Carousel } from "antd";
 import "./Watches.css";
 import AllWatch from "../AllWatch/AllWatch";
 import Search from "../Search/Search";
 import Filters from "../Filter/Filter";
 import { useSearchParams } from "react-router-dom";
+// import { rolexContext } from "../../context/rolexContext";
 
 const Watches = () => {
   const [price, setPrice] = useState([1, 6000]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [showFilters, setShowFilters] = useState(false);
+  // const { getWatch } = useContext(rolexContext);
   useEffect(() => {
     setSearchParams({
       price_from: price[0],
       price_to: price[1],
     });
   }, [price]);
+
   return (
     <div className="watch-container">
       <div className="header">
